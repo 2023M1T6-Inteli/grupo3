@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Jogo Unipar"
-run/main_scene="res://Cena Nivel principal.tscn"
+run/main_scene="res://Control.tscn"
 config/icon="res://icon.png"
 
 [display]

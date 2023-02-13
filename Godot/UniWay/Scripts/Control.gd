@@ -1,14 +1,21 @@
 extends Control
 
+
+
 func _ready():
-	$control/StartButton.grab_focus() #Essa linha faz o botão estar selecionado, ao entrar no jogo.
-
-
-
-#func _on_StartButton_pressed():
-	#get_tree().change_scene() # Essa função faz trocar de cena ao clicar no "start"
 	pass
-
-func _on_quitbtn_pressed() ->void:
-	get_tree().quit() # Essa função fecha o jogo ao clicar em "sair"
 	
+func _on_StartButton_pressed(): # essa funçao inicia o jogo ao aperta "start"
+		get_tree().change_scene("res://Cena Nivel principal.tscn")
+		
+
+func _on_Controles_pressed(): # essa função troca para a tela dos controles ao clicar "controles"
+	get_tree().change_scene("res://Tela de controles.tscn")
+	pass 
+
+
+func _on_quitbtn_pressed():
+	get_tree().quit() # Essa função faz fechar o jogo ao clicar em "sair"
+	pass 
+
+
