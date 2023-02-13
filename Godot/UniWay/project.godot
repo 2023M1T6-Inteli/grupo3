@@ -11,14 +11,13 @@ config_version=4
 [application]
 
 config/name="Jogo Unipar"
-run/main_scene="res://Cena Nivel principal.tscn"
+run/main_scene="res://Control.tscn"
 config/icon="res://icon.png"
 
 [display]
 
 window/size/width=1920
 window/size/height=1080
-window/size/resizable=false
 window/size/borderless=true
 window/dpi/allow_hidpi=true
 window/stretch/aspect="expand"
