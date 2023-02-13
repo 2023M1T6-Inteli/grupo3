@@ -2,9 +2,9 @@ extends KinematicBody2D
 
 #Criação de variáveis para armazenar valores da movimentação horizontal e vertical do caminhão
 var velocidadeHorizontal: Vector2
-var multiplicadordeVelocidadeHorizontal = 800
+var multiplicadordeVelocidadeHorizontal = 750
 var velocidadeVertical: Vector2
-var multiplicadordeVelocidadeVertical: int = 3000
+var multiplicadordeVelocidadeVertical: int = 2800
 #Função de física padrão do Godot para chamar funções de movimento
 # warning-ignore:unused_argument
 func _physics_process(delta):
