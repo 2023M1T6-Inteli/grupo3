@@ -1,14 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Movimentação padrão.gd" type="Script" id=1]
 [ext_resource path="res://terreno amarelo.png" type="Texture" id=2]
 [ext_resource path="res://pixil-frame-0 (5).png" type="Texture" id=3]
 [ext_resource path="res://caminhão unipar.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Assets/Assets/Highway Artwork/Layers/background-light.png" type="Texture" id=5]
+[ext_resource path="res://Cena Nivel principal.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.4, 33.5 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -194,12 +197,6 @@ position = Vector2( 0, -1000 )
 scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2( 1194, 1183 )
-offset = Vector2( -100, 0 )
-current = true
-zoom = Vector2( 5, 5 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 1201, 1196.5 )
 scale = Vector2( 5, 5 )
@@ -209,3 +206,28 @@ shape = SubResource( 1 )
 position = Vector2( 0.200012, 0.300034 )
 scale = Vector2( 0.9, 0.9 )
 texture = ExtResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( 1202.5, 1202 )
+current = true
+zoom = Vector2( 2, 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="player/Camera2D"]
+margin_left = -183.0
+margin_top = 331.0
+margin_right = 142.0
+margin_bottom = 462.0
+rect_scale = Vector2( 2, 2 )
+theme = null
+text = "PONTOS:"
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 0, 16000 )
+
+[node name="Poste" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer"]
+margin_right = 40.0
+margin_bottom = 66.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 5 )
