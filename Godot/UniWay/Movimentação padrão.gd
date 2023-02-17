@@ -23,10 +23,10 @@ func movimentoHorizontal() -> void:
 	velocidadeHorizontal.x = validacaodeMovimento * multiplicadordeVelocidadeHorizontal
 	#Faz a rotação do caminhão na movimentação horizontal
 	if (validacaodeMovimento > 0):
-		$CollisionShape2D.rotation = 0.15
+		$CollisionPolygon2D.rotation = 0.15
 	elif (validacaodeMovimento == 0):
-		$CollisionShape2D.rotation = 0
+		$CollisionPolygon2D.rotation = 0
 	else:
-		$CollisionShape2D.rotation = -0.15
+		$CollisionPolygon2D.rotation = -0.15
 
 

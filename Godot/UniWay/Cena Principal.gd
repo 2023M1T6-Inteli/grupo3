@@ -9,5 +9,5 @@ func _process(delta):
 
 func placarPista():
 	quantidadesDePontos +=1
-	$player/Camera2D/RichTextLabel.text = "Pontos: " + String(quantidadesDePontos)
+	$KinematicBody2D/Camera2D/Label.text = "Pontos " + String(quantidadesDePontos)
 
