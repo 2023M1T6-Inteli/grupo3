@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets novos/caminhão unipar.png" type="Texture" id=1]
-[ext_resource path="res://Assets novos/Nível Principal/Terreno .png" type="Texture" id=2]
-[ext_resource path="res://Assets novos/Nível Principal/Rodovia.png" type="Texture" id=3]
+[ext_resource path="res://Assets novos/Terreno .png" type="Texture" id=2]
+[ext_resource path="res://Assets novos/Rodovia.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/Caminhão Unipar.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Cena Principal.gd" type="Script" id=5]
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=6]

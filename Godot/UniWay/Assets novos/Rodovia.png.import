@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rodovia.png-c2ebc9587acb3cae44259a0578f0b389.stex"
+path="res://.import/Rodovia.png-9db395a5ae3ca38610c86ec2c0ae3a8e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets novos/Nível Principal/Rodovia.png"
-dest_files=[ "res://.import/Rodovia.png-c2ebc9587acb3cae44259a0578f0b389.stex" ]
+source_file="res://Assets novos/Rodovia.png"
+dest_files=[ "res://.import/Rodovia.png-9db395a5ae3ca38610c86ec2c0ae3a8e.stex" ]
 
 [params]
 
