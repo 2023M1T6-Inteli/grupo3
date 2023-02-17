@@ -82,7 +82,7 @@ texture = ExtResource( 2 )
 margin_left = -1041.0
 margin_top = 7098.0
 margin_right = -1026.0
-margin_bottom = 7169.0
+margin_bottom = 7170.0
 rect_scale = Vector2( 100, 100 )
 texture = ExtResource( 2 )
 
