@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Movimentação padrão.gd" type="Script" id=1]
 [ext_resource path="res://terreno amarelo.png" type="Texture" id=2]
 [ext_resource path="res://pixil-frame-0 (5).png" type="Texture" id=3]
 [ext_resource path="res://caminhão unipar.png" type="Texture" id=4]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.4, 33.5 )
@@ -12,72 +13,15 @@ extents = Vector2( 15.4, 33.5 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Rodovia" type="ParallaxLayer" parent="ParallaxBackground"]
-scale = Vector2( 2, 2 )
-z_as_relative = false
-motion_mirroring = Vector2( 0, 7176 )
-
-[node name="Pixil-frame-0(5)2" type="TextureRect" parent="ParallaxBackground/Rodovia"]
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-
-[node name="Pixil-frame-0(5)" type="TextureRect" parent="ParallaxBackground/Rodovia"]
-margin_top = -1196.0
-margin_right = 1664.0
-margin_bottom = 468.0
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
-
-[node name="Pixil-frame-0(5)3" type="TextureRect" parent="ParallaxBackground/Rodovia"]
-margin_top = -2392.0
-margin_right = 1664.0
-margin_bottom = -728.0
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
-
-[node name="Pixil-frame-0(5)4" type="TextureRect" parent="ParallaxBackground/Rodovia"]
-margin_top = 1196.0
-margin_right = 1664.0
-margin_bottom = 2860.0
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
-
-[node name="Pixil-frame-0(5)5" type="TextureRect" parent="ParallaxBackground/Rodovia"]
-margin_top = -3588.0
-margin_right = 1664.0
-margin_bottom = -1924.0
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
-
-[node name="Pixil-frame-0(5)6" type="TextureRect" parent="ParallaxBackground/Rodovia"]
-margin_top = 2392.0
-margin_right = 1664.0
-margin_bottom = 4056.0
-size_flags_vertical = 3
-texture = ExtResource( 3 )
-expand = true
-
 [node name="Terreno1" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( 293, 0 )
 motion_mirroring = Vector2( 0, 7500 )
 
 [node name="TerrenoAmarelo" type="TextureRect" parent="ParallaxBackground/Terreno1"]
-margin_left = 277.0
-margin_top = 340.0
-margin_right = 358.0
-margin_bottom = 705.0
-rect_scale = Vector2( -100, 3.25 )
-texture = ExtResource( 2 )
-
-[node name="TerrenoAmarelo3" type="TextureRect" parent="ParallaxBackground/Terreno1"]
-margin_left = 277.0
-margin_top = -691.0
-margin_right = 358.0
-margin_bottom = -326.0
+margin_left = 278.0
+margin_top = 332.0
+margin_right = 360.0
+margin_bottom = 697.0
 rect_scale = Vector2( -100, 3.25 )
 texture = ExtResource( 2 )
 
@@ -97,11 +41,19 @@ margin_bottom = 3812.0
 rect_scale = Vector2( -100, 3.25 )
 texture = ExtResource( 2 )
 
-[node name="TerrenoAmarelo2" type="TextureRect" parent="ParallaxBackground/Terreno1"]
-margin_left = 277.0
-margin_top = -1844.0
-margin_right = 358.0
-margin_bottom = -1479.0
+[node name="TerrenoAmarelo8" type="TextureRect" parent="ParallaxBackground/Terreno1"]
+margin_left = 276.0
+margin_top = -544.0
+margin_right = 357.0
+margin_bottom = -179.0
+rect_scale = Vector2( -100, 3.25 )
+texture = ExtResource( 2 )
+
+[node name="TerrenoAmarelo9" type="TextureRect" parent="ParallaxBackground/Terreno1"]
+margin_left = 281.0
+margin_top = -1707.0
+margin_right = 362.0
+margin_bottom = -1342.0
 rect_scale = Vector2( -100, 3.25 )
 texture = ExtResource( 2 )
 
@@ -115,9 +67,9 @@ texture = ExtResource( 2 )
 
 [node name="TerrenoAmarelo7" type="TextureRect" parent="ParallaxBackground/Terreno1"]
 margin_left = 276.0
-margin_top = 4581.0
+margin_top = 4621.0
 margin_right = 357.0
-margin_bottom = 4946.0
+margin_bottom = 4986.0
 rect_scale = Vector2( -100, 3.25 )
 texture = ExtResource( 2 )
 
@@ -189,6 +141,55 @@ margin_bottom = -1472.0
 rect_scale = Vector2( 100, 3.25 )
 texture = ExtResource( 2 )
 
+[node name="Rodovia" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2( 2, 2 )
+z_as_relative = false
+motion_mirroring = Vector2( 0, 7176 )
+
+[node name="Pixil-frame-0(5)2" type="TextureRect" parent="ParallaxBackground/Rodovia"]
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+
+[node name="Pixil-frame-0(5)" type="TextureRect" parent="ParallaxBackground/Rodovia"]
+margin_top = -1205.0
+margin_right = 1664.0
+margin_bottom = 459.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Pixil-frame-0(5)3" type="TextureRect" parent="ParallaxBackground/Rodovia"]
+margin_top = -2392.0
+margin_right = 1664.0
+margin_bottom = -728.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Pixil-frame-0(5)4" type="TextureRect" parent="ParallaxBackground/Rodovia"]
+margin_top = 1196.0
+margin_right = 1664.0
+margin_bottom = 2860.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Pixil-frame-0(5)5" type="TextureRect" parent="ParallaxBackground/Rodovia"]
+margin_top = -3588.0
+margin_right = 1664.0
+margin_bottom = -1924.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Pixil-frame-0(5)6" type="TextureRect" parent="ParallaxBackground/Rodovia"]
+margin_top = 2392.0
+margin_right = 1664.0
+margin_bottom = 4056.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+
 [node name="player" type="KinematicBody2D" parent="."]
 position = Vector2( 0, -1000 )
 scale = Vector2( 2, 2 )
@@ -199,6 +200,13 @@ position = Vector2( 1194, 1183 )
 offset = Vector2( -100, 0 )
 current = true
 zoom = Vector2( 5, 5 )
+
+[node name="Pause" parent="player/Camera2D" instance=ExtResource( 5 )]
+pause_mode = 2
+margin_left = -344.5
+margin_top = -887.5
+margin_right = -344.5
+margin_bottom = -887.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2( 1201, 1196.5 )
