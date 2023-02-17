@@ -11,8 +11,11 @@ config_version=4
 [application]
 
 config/name="Jogo Unipar"
-run/main_scene="res://Control.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Cenas/Control.tscn"
+
+[autoload]
+
+Global="*res://Scripts/Global.gd"
 
 [display]
 

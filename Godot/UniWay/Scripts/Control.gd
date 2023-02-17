@@ -6,11 +6,11 @@ func _ready():
 	pass
 	
 func _on_StartButton_pressed(): # essa funçao inicia o jogo ao aperta "start"
-		get_tree().change_scene("res://Novo Nivel Principal.tscn")
+		get_tree().change_scene("res://Cenas/Novo Nivel Principal.tscn")
 		
 
 func _on_Controles_pressed(): # essa função troca para a tela dos controles ao clicar "controles"
-	get_tree().change_scene("res://Tela de controles.tscn")
+	get_tree().change_scene("res://Cenas/Tela de controles.tscn")
 
 
 func _on_quitbtn_pressed():
