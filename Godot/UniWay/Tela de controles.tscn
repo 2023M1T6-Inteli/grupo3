@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://press_start_2p/PressStart2P.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Sair.gd" type="Script" id=2]
@@ -7,9 +7,21 @@
 size = 24
 font_data = ExtResource( 1 )
 
+[sub_resource type="DynamicFont" id=3]
+outline_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 3 )
+
+[sub_resource type="Theme" id=5]
+
 [sub_resource type="DynamicFont" id=2]
 size = 50
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.109804, 0.105882, 0.105882, 1 )
 
 [node name="Tela decontroles" type="Control"]
 anchor_right = 1.0
@@ -43,6 +55,7 @@ margin_right = 345.0
 margin_bottom = 179.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource( 4 )
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 margin_right = 345.0
@@ -53,7 +66,9 @@ size_flags_vertical = 3
 [node name="Sair" type="Button" parent="VBoxContainer/MarginContainer"]
 margin_right = 345.0
 margin_bottom = 179.0
+theme = SubResource( 5 )
 custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 6 )
 text = "VOLTAR"
 script = ExtResource( 2 )
 
