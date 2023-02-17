@@ -12,13 +12,21 @@ func _physics_process(delta):
 #Definindo a variavel movimento como slide para facilitar a detecção de colisões
 	velocidadeHorizontal = move_and_slide(velocidadeHorizontal)
 	velocidadeVertical = move_and_slide(velocidadeVertical)
-	pass
+	#Realizar a movimentação vertical
+	velocidadeVertical.y = - multiplicadordeVelocidadeVertical
+	
 
 #Função para realizar o movimento horizontal do caminhão
 func movimentoHorizontal() -> void:
 	#Realizar a movimentação horizontal
 	var validacaodeMovimento: float = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	velocidadeHorizontal.x = validacaodeMovimento * multiplicadordeVelocidadeHorizontal
-	#Realizar a movimentação vertical
-	velocidadeVertical.y = - multiplicadordeVelocidadeVertical
-	
+	#Faz a rotação do caminhão na movimentação horizontal
+	if (validacaodeMovimento > 0):
+		$CollisionShape2D.rotation = 0.15
+	elif (validacaodeMovimento == 0):
+		$CollisionShape2D.rotation = 0
+	else:
+		$CollisionShape2D.rotation = -0.15
+
+
