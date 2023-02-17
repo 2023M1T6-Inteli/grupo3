@@ -1,6 +1,6 @@
 extends Node2D
 
-var quantidadesDePontos
+var quantidadesDePontos :int
 
 func _ready():
 	quantidadesDePontos = 0

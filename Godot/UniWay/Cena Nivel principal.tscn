@@ -210,7 +210,7 @@ texture = ExtResource( 4 )
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2( 1202.5, 1202 )
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 3, 3 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="player/Camera2D"]
 margin_left = -183.0
@@ -218,7 +218,6 @@ margin_top = 331.0
 margin_right = 142.0
 margin_bottom = 462.0
 rect_scale = Vector2( 2, 2 )
-theme = null
 text = "PONTOS:"
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]

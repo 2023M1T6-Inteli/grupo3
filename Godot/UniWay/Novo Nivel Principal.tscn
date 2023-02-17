@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://caminhão unipar.png" type="Texture" id=1]
+[ext_resource path="res://Nível Principal/Terreno .png" type="Texture" id=2]
+[ext_resource path="res://Nível Principal/Rodovia.png" type="Texture" id=3]
+[ext_resource path="res://Caminhão Unipar.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="RodoviaLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 5000 )
+
+[node name="Rodovia" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 70.0
+margin_right = 559.0
+margin_bottom = 170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="Rodovia2" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 1070.0
+margin_right = 559.0
+margin_bottom = 1170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="Rodovia3" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 2070.0
+margin_right = 559.0
+margin_bottom = 2170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="Rodovia4" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 3070.0
+margin_right = 559.0
+margin_bottom = 3170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="Rodovia5" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 4070.0
+margin_right = 559.0
+margin_bottom = 4170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="TerrenoELayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 14200 )
+
+[node name="Terreno" type="TextureRect" parent="ParallaxBackground/TerrenoELayer"]
+margin_left = -1041.0
+margin_top = 2.0
+margin_right = -1026.0
+margin_bottom = 73.0
+rect_scale = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+
+[node name="Terreno2" type="TextureRect" parent="ParallaxBackground/TerrenoELayer"]
+margin_left = -1041.0
+margin_top = 7098.0
+margin_right = -1026.0
+margin_bottom = 7169.0
+rect_scale = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+
+[node name="TerrenoDLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 7100 )
+
+[node name="Terreno3" type="TextureRect" parent="ParallaxBackground/TerrenoDLayer"]
+margin_left = 1459.0
+margin_top = 3.0
+margin_right = 1474.0
+margin_bottom = 74.0
+rect_scale = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+
+[node name="Terreno4" type="TextureRect" parent="ParallaxBackground/TerrenoDLayer"]
+margin_left = 1459.0
+margin_top = 7097.0
+margin_right = 1474.0
+margin_bottom = 7168.0
+rect_scale = Vector2( 100, 100 )
+texture = ExtResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+build_mode = 1
+polygon = PoolVector2Array( 1105, 475, 1152, 475, 1164, 489, 1158, 611, 1100, 611, 1096, 487 )
+
+[node name="CaminhãoUnipar" type="Sprite" parent="KinematicBody2D/CollisionPolygon2D"]
+position = Vector2( 1130, 544 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 1 )
