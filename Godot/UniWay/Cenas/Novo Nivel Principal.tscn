@@ -26,7 +26,7 @@ script = ExtResource( 5 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="RodoviaLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 0, 5000 )
+motion_mirroring = Vector2( 0, 8000 )
 
 [node name="Rodovia" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
 margin_left = 459.0
@@ -68,8 +68,32 @@ margin_bottom = 4170.0
 rect_scale = Vector2( 10, 10 )
 texture = ExtResource( 3 )
 
+[node name="Rodovia6" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 5070.0
+margin_right = 559.0
+margin_bottom = 5170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="Rodovia7" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 6070.0
+margin_right = 559.0
+margin_bottom = 6170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
+[node name="Rodovia8" type="TextureRect" parent="ParallaxBackground/RodoviaLayer"]
+margin_left = 459.0
+margin_top = 7070.0
+margin_right = 559.0
+margin_bottom = 7170.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+
 [node name="TerrenoELayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 0, 14200 )
+motion_mirroring = Vector2( 0, 10000 )
 
 [node name="Terreno" type="TextureRect" parent="ParallaxBackground/TerrenoELayer"]
 margin_left = -1041.0
@@ -122,6 +146,7 @@ position = Vector2( 1247, 407 )
 shape = SubResource( 1 )
 
 [node name="CaminhãoUnipar" type="Sprite" parent="KinematicBody2D/CollisionShape2D"]
+light_mask = 0
 position = Vector2( 0.5, 1 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
@@ -135,31 +160,37 @@ current = true
 smoothing_enabled = true
 smoothing_speed = 7.0
 
-[node name="pauseMask" type="CanvasModulate" parent="KinematicBody2D/Camera2D"]
-pause_mode = 2
-process_priority = 1
-visible = false
-position = Vector2( -1127, -543 )
-color = Color( 0.290196, 0.290196, 0.290196, 1 )
+[node name="VBoxContainer" type="VBoxContainer" parent="KinematicBody2D/Camera2D"]
+light_mask = 0
+margin_left = -234.0
+margin_top = -824.0
+margin_right = -194.0
+margin_bottom = -784.0
+__meta__ = {
+"_editor_description_": ""
+}
 
-[node name="Label" type="Label" parent="KinematicBody2D/Camera2D"]
-margin_left = 17.0
-margin_top = -19.0
-margin_right = 120.0
-margin_bottom = 11.0
+[node name="Pause" parent="KinematicBody2D/Camera2D/VBoxContainer" instance=ExtResource( 7 )]
+pause_mode = 2
+light_mask = 16
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+
+[node name="Label" type="Label" parent="KinematicBody2D"]
+margin_left = 1144.0
+margin_top = 524.0
+margin_right = 1247.0
+margin_bottom = 554.0
 rect_scale = Vector2( 1.5, 1.5 )
 theme = SubResource( 3 )
 text = "Pontos"
 uppercase = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="KinematicBody2D/Camera2D"]
-margin_left = -234.0
-margin_top = -824.0
-margin_right = -194.0
-margin_bottom = -784.0
-
-[node name="Pause" parent="KinematicBody2D/Camera2D/VBoxContainer" instance=ExtResource( 7 )]
-pause_mode = 2
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 40.0
+[node name="pauseMask" type="ColorRect" parent="KinematicBody2D/Label"]
+margin_left = -965.333
+margin_top = -1379.33
+margin_right = 1034.67
+margin_bottom = 620.667
+mouse_filter = 2
+color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
