@@ -27,5 +27,4 @@ func movimentoHorizontal() -> void:
 		$CollisionShape2D.rotation = 0
 	else:
 		$CollisionShape2D.rotation = -0.15
-	
 
