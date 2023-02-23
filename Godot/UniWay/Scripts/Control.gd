@@ -8,7 +8,7 @@ func _ready():
 func _on_StartButton_pressed(): # essa funçao inicia o jogo ao aperta "start"
 	#animação de transição
 	transitionScene.trocaDeCena()
-	get_tree().change_scene("res://Cenas/Novo Nivel Principal.tscn")
+	get_tree().change_scene("res://Cenas/Checklist.tscn")
 	
 
 func _on_Controles_pressed(): # essa função troca para a tela dos controles ao clicar "controles"
