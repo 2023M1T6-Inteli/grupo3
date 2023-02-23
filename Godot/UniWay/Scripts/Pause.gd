@@ -5,12 +5,12 @@ func _ready():
 	self.visible = false
 
 #Variável que permite o funcionamento do modo de pause
-var is_paused = false setget set_is_paused
+var isPaused = false setget set_is_paused
 
 #Função que habilita o modo de pause
 func _unhandled_input(event):
 	if event.is_action_pressed("paused"):
-		self.is_paused = !is_paused
+		self.isPaused = !isPaused
 		#Condição que garante o aparecimento e desaparecimento do menu de pause
 		if (self.visible == false):
 			self.visible = true
@@ -18,19 +18,19 @@ func _unhandled_input(event):
 			self.visible = false
 #Função que habilita o modo de pause, trabalhando junto com a de cima
 func set_is_paused(value):
-	is_paused = value
-	get_tree().paused = is_paused
+	isPaused = value
+	get_tree().paused = isPaused
 
 #Função que resume o jogo, ou seja
 #retira o modo de pause
 func _on_Resumir_pressed():
-	self.is_paused = false
+	self.isPaused = false
 	print("estou aqui")
 	self.visible = false
 
 #Função que volta para a tela inicial
 func _on_Sair_pressed():
-	self.is_paused = false
+	self.isPaused = false
 	get_tree().change_scene("res://Cenas/Control.tscn")
 	
 #Função que armazena um valor verdadeiro ou falso de acordo
