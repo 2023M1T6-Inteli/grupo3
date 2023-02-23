@@ -1,18 +1,14 @@
 extends Control
 
+onready var caminhao = get_node("KinematicBody2D")
 
-
-func _ready():
-	pass
 	
 func _on_StartButton_pressed(): # essa funçao inicia o jogo ao aperta "start"
-	#animação de transição
-	transitionScene.trocaDeCena()
-	get_tree().change_scene("res://Cenas/Checklist.tscn")
-	
+	caminhao.verificadorDeMovimento = true
+
 
 func _on_Controles_pressed(): # essa função troca para a tela dos controles ao clicar "controles"
-	#animação de transição
+	#Animação de transição
 	transitionScene.trocaDeCena()
 	get_tree().change_scene("res://Cenas/Tela de controles.tscn")
 

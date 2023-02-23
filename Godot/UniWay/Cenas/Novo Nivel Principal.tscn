@@ -188,6 +188,7 @@ text = "Pontos"
 uppercase = true
 
 [node name="pauseMask" type="ColorRect" parent="KinematicBody2D/Label"]
+visible = false
 margin_left = -965.333
 margin_top = -1379.33
 margin_right = 1034.67
