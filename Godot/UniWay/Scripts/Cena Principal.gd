@@ -26,3 +26,7 @@ func pauseMaskControlador() ->void:
 		
 
 
+
+
+func _on_carrinho_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
