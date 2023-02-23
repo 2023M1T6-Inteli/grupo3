@@ -7,7 +7,7 @@
 [ext_resource path="res://Scripts/Cena Principal.gd" type="Script" id=5]
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Cenas/Pause.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Cenas/carrinho.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/carrinho.gd" type="Script" id=8]
 [ext_resource path="res://Assets novos/carrinho.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -193,39 +193,56 @@ theme = SubResource( 3 )
 text = "Pontos"
 uppercase = true
 
-[node name="pauseMask" type="ColorRect" parent="KinematicBody2D/Label"]
-visible = false
-margin_left = -965.333
-margin_top = -1379.33
-margin_right = 1034.67
-margin_bottom = 620.667
-mouse_filter = 2
-color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
-
 [node name="carrinho" type="KinematicBody2D" parent="."]
 pause_mode = 1
-position = Vector2( 893, 70 )
+position = Vector2( 875, -430 )
 script = ExtResource( 8 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="carrinho"]
+[node name="Area2D" type="Area2D" parent="carrinho"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="carrinho/Area2D"]
 position = Vector2( 36, -41 )
 shape = SubResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="carrinho/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="carrinho/Area2D/CollisionShape2D"]
 position = Vector2( 1, 1 )
 scale = Vector2( 3.3125, 3.5 )
 texture = ExtResource( 9 )
 
-[node name="carrinho2" type="KinematicBody2D" parent="."]
-pause_mode = 1
-position = Vector2( 771, 78 )
-script = ExtResource( 8 )
+[node name="Area2D2" type="Area2D" parent="carrinho"]
+position = Vector2( -881, -398 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="carrinho2"]
-position = Vector2( 36, -150 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="carrinho/Area2D2"]
+position = Vector2( 807, -72 )
 shape = SubResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="carrinho2/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="carrinho/Area2D2/CollisionShape2D"]
 position = Vector2( 1, 1 )
 scale = Vector2( 3.3125, 3.5 )
 texture = ExtResource( 9 )
+
+[node name="Area2D3" type="Area2D" parent="carrinho"]
+position = Vector2( -230, -700 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="carrinho/Area2D3"]
+position = Vector2( 36, -41 )
+shape = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="carrinho/Area2D3/CollisionShape2D"]
+position = Vector2( 1, 1 )
+scale = Vector2( 3.3125, 3.5 )
+texture = ExtResource( 9 )
+
+[node name="pauseMask" type="ColorRect" parent="carrinho/Area2D3/CollisionShape2D/Sprite"]
+visible = false
+margin_left = -2500.0
+margin_top = -3000.0
+margin_right = 2500.0
+margin_bottom = 3000.0
+mouse_filter = 2
+color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
+
+[connection signal="input_event" from="carrinho" to="carrinho" method="_on_carrinho_input_event"]
+[connection signal="body_entered" from="carrinho/Area2D" to="carrinho" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="carrinho/Area2D2" to="carrinho" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="carrinho/Area2D3" to="carrinho" method="_on_Area2D_body_entered"]

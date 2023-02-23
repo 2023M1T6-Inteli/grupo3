@@ -10,6 +10,7 @@ var velocidadeVertical: Vector2
 var multiplicadordeVelocidadeVertical: int = 500
 #Função de física padrão do Godot para chamar funções de movimento
 func _physics_process(delta):
+	#Equação que armazena a posição do caminhão em uma variavél global
 	Global.posicionamentoDoJogador = $"CollisionShape2D/CaminhãoUnipar".global_position.y;
 	movimentoHorizontal()
 	#Definindo a variavel movimento como slide para facilitar a detecção de colisões

@@ -18,15 +18,9 @@ func placarPista():
 #Função que habilita e desabilita a cor para o menu de pause
 func pauseMaskControlador() ->void:
 	if(Global.verificadorDePause == true):
-		$KinematicBody2D/Label/pauseMask.visible = true
+		$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = true
 		$ParallaxBackground/pauseMask2.visible = true
 	else:
-		$KinematicBody2D/Label/pauseMask.visible = false
+		$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = false
 		$ParallaxBackground/pauseMask2.visible = false
-		
-
-
-
-
-func _on_carrinho_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
+	

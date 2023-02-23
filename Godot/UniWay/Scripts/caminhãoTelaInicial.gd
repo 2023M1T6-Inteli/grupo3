@@ -1,11 +1,17 @@
 extends KinematicBody2D
 
+#Variaveis para armazenar valores de movimentação e
+#validação da movimentação
 var movimentoHorizontal: Vector2
 var verificadorDeMovimento :bool
 
+#Armazeno o valor na validação de movimento como false para
+#o caminhão não ativar a movimentação no inicio da cena
 func _ready():
 	verificadorDeMovimento = false
 
+#Após a validação de movimento estar permitida o caminhão se desloca até 
+#o canto da tela que assim se satisfaz a condição de troca de cena
 func _process(delta):
 	if verificadorDeMovimento == true:
 		movimentoHorizontal = move_and_slide(movimentoHorizontal)
