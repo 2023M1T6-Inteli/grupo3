@@ -9,12 +9,14 @@
 size = 30
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 1
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 30
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 1
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=5]
@@ -68,9 +70,9 @@ text = "Arrumar Freios"
 flat = true
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 904.0
+margin_left = 894.0
 margin_top = 446.0
-margin_right = 1217.0
+margin_right = 1222.0
 margin_bottom = 488.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
@@ -82,9 +84,9 @@ text = "Verificar  Motor"
 flat = true
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 901.0
+margin_left = 897.0
 margin_top = 607.0
-margin_right = 1214.0
+margin_right = 1222.0
 margin_bottom = 649.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
@@ -92,7 +94,7 @@ custom_colors/font_color_hover = Color( 0.341176, 1, 0.321569, 1 )
 custom_colors/font_color_pressed = Color( 0.341176, 1, 0.321569, 1 )
 custom_fonts/font = SubResource( 4 )
 enabled_focus_mode = 0
-text = "Verificar  Motor"
+text = "Alinhar eixos"
 flat = true
 
 [node name="Button4" type="Button" parent="."]
@@ -106,7 +108,7 @@ custom_colors/font_color_hover = Color( 0.341176, 1, 0.321569, 1 )
 custom_colors/font_color_pressed = Color( 0.341176, 1, 0.321569, 1 )
 custom_fonts/font = SubResource( 4 )
 enabled_focus_mode = 0
-text = "Verificar  Motor"
+text = "Calibrar Pneus"
 flat = true
 
 [node name="continuar" type="Button" parent="."]
