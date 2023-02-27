@@ -56,10 +56,10 @@ position = Vector2( 744, 852 )
 texture = ExtResource( 2 )
 
 [node name="Button1" type="Button" parent="."]
-margin_left = 910.0
-margin_top = 299.0
-margin_right = 1207.0
-margin_bottom = 341.0
+margin_left = 809.0
+margin_top = 289.0
+margin_right = 1319.0
+margin_bottom = 364.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
 custom_colors/font_color_hover = Color( 0.341176, 1, 0.321569, 1 )
@@ -70,10 +70,10 @@ text = "Arrumar Freios"
 flat = true
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 894.0
-margin_top = 446.0
-margin_right = 1222.0
-margin_bottom = 488.0
+margin_left = 815.0
+margin_top = 440.0
+margin_right = 1301.0
+margin_bottom = 521.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
 custom_colors/font_color_hover = Color( 0.341176, 1, 0.321569, 1 )
@@ -84,10 +84,10 @@ text = "Verificar  Motor"
 flat = true
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 897.0
-margin_top = 607.0
-margin_right = 1222.0
-margin_bottom = 649.0
+margin_left = 817.0
+margin_top = 589.0
+margin_right = 1299.0
+margin_bottom = 681.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
 custom_colors/font_color_hover = Color( 0.341176, 1, 0.321569, 1 )
@@ -98,10 +98,10 @@ text = "Alinhar eixos"
 flat = true
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 902.0
-margin_top = 764.0
-margin_right = 1215.0
-margin_bottom = 806.0
+margin_left = 814.0
+margin_top = 749.0
+margin_right = 1307.0
+margin_bottom = 829.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
 custom_colors/font_color_hover = Color( 0.341176, 1, 0.321569, 1 )
