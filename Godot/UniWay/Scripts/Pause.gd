@@ -31,7 +31,7 @@ func _on_Resumir_pressed():
 #Função que volta para a tela inicial
 func _on_Sair_pressed():
 	self.isPaused = false
-	get_tree().change_scene("res://Cenas/Control.tscn")
+	get_tree().change_scene("res://Cenas/menuPrincipal.tscn")
 	
 #Função que armazena um valor verdadeiro ou falso de acordo
 #com a visibilidade do menu de pause

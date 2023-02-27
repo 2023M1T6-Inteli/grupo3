@@ -62,17 +62,23 @@ valign = 1
 margin_top = 267.0
 margin_right = 503.0
 margin_bottom = 329.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0.866667, 1, 0.00392157, 1 )
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
+enabled_focus_mode = 0
 text = "Resumir"
 
 [node name="Sair" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 479.0
 margin_right = 503.0
 margin_bottom = 538.0
+focus_mode = 0
 theme = SubResource( 6 )
+custom_colors/font_color_hover = Color( 0.905882, 0.960784, 0.211765, 1 )
 custom_fonts/font = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
 text = "Sair"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resumir" to="." method="_on_Resumir_pressed"]

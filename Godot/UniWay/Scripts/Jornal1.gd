@@ -10,4 +10,4 @@ func _process(delta):
 
 #Função que realiza a troca para a cena inicial
 func _on_voltarParaOMenu_pressed():
-	get_tree().change_scene("res://Cenas/Control.tscn")
+	get_tree().change_scene("res://Cenas/menuPrincipal.tscn")
