@@ -295,12 +295,13 @@ anchor_bottom = 0.0
 margin_right = 40.0
 
 [node name="Label" type="Label" parent="KinematicBody2D/Camera2D"]
-margin_left = -887.0
-margin_top = -1012.0
-margin_right = 987.0
-margin_bottom = -867.0
+margin_left = -939.0
+margin_top = -1022.0
+margin_right = 935.0
+margin_bottom = -877.0
 custom_fonts/font = SubResource( 5 )
 text = "Para movimentar utilize os comandos abaixo"
+align = 1
 
 [node name="Label" type="Label" parent="KinematicBody2D"]
 margin_left = 1144.0
