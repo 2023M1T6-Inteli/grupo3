@@ -20,6 +20,29 @@ func _on_Button4_pressed():
 func _process(delta):
 	if($"Check(Checklist)1".visible == true && $"Check(Checklist)2".visible == true && $"Check(Checklist)3".visible == true && $"Check(Checklist)4".visible == true):
 		$continuar.disabled = false
+	if Global.idiomaEscolhido == 0:
+		$Button1.text = "Arrumar Freios"
+		$Button2.text = "Verificar  Motor"
+		$Button3.text = "Alinhar eixos"
+		$Button4.text = "Calibrar Pneus"
+		$continuar.text = "Continuar"
+	
+	elif Global.idiomaEscolhido == 1:
+		$Button1.text = "fix brakes"
+		$Button2.text = "Check Engine"
+		$Button3.text = "align axes"
+		$Button4.text = "Calibrate Tires"
+		$continuar.text = "Continue"
+			
+	
+	elif Global.idiomaEscolhido == 2:
+		$Button1.text = "arreglar frenos"
+		$Button2.text = "Comprobar motor"
+		$Button3.text = "alinear ejes"
+		$Button4.text = "calibrar ruedas"
+		$continuar.text = "Continuar"
+			
+
 
 #Função de troca de cena
 func _on_continuar_pressed():

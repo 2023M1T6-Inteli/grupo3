@@ -13,6 +13,11 @@ var limitadorDeRotacionar :float
 var limitadorHorizontalDireita :float
 var limitadorHorizontalEsquerda :float
 
+func _ready():
+	#Essa mudança de valor da variável garante que o tutorial apareça se
+	#não houver movimentação horizontal do caminhão
+	Global.validadorDeMovimentoTutorial = true
+
 #Função de física padrão do Godot para chamar funções de movimento
 func _physics_process(delta):
 	#Equação que armazena a posição do caminhão em uma variavél global
@@ -31,6 +36,9 @@ func movimentoHorizontal() -> void:
 	#Realizar a movimentação horizontal
 	var validacaodeMovimento: float = (Input.get_action_strength("ui_right") * limitadorHorizontalDireita) - (Input.get_action_strength("ui_left") * limitadorHorizontalEsquerda)
 	velocidadeHorizontal.x = validacaodeMovimento * multiplicadordeVelocidadeHorizontal
+	#Essa condição faz com q o tutorial não apareça
+	if validacaodeMovimento != 0:
+		Global.validadorDeMovimentoTutorial = false
 	#Faz a rotação do caminhão na movimentação horizontal
 	if (validacaodeMovimento > 0):
 		$CollisionShape2D.rotation = 0.15 * limitadorDeRotacionar

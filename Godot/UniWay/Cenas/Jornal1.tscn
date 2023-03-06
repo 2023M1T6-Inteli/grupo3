@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets novos/Jornais/jornalMasculino1.png" type="Texture" id=1]
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Jornal1.gd" type="Script" id=3]
-[ext_resource path="res://Scripts/Relógio.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/relogio.gd" type="Script" id=4]
 [ext_resource path="res://Assets novos/Caminhão da Unipar.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]

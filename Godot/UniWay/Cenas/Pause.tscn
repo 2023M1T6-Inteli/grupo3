@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Pause.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/relogioNivelPrincipal.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -68,6 +69,7 @@ custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 enabled_focus_mode = 0
 text = "Resumir"
+flat = true
 
 [node name="Sair" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 479.0
@@ -80,6 +82,11 @@ custom_fonts/font = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 enabled_focus_mode = 0
 text = "Sair"
+flat = true
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( -100, 5000 )
+script = ExtResource( 3 )
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resumir" to="." method="_on_Resumir_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Sair" to="." method="_on_Sair_pressed"]

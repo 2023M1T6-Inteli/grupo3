@@ -10,7 +10,6 @@ var isPaused = false setget set_is_paused
 #Função que habilita o modo de pause
 func _unhandled_input(event):
 	if event.is_action_pressed("paused"):
-		self.isPaused = !isPaused
 		#Condição que garante o aparecimento e desaparecimento do menu de pause
 		if (self.visible == false):
 			self.visible = true
@@ -25,7 +24,6 @@ func set_is_paused(value):
 #retira o modo de pause
 func _on_Resumir_pressed():
 	self.isPaused = false
-	print("estou aqui")
 	self.visible = false
 
 #Função que volta para a tela inicial
@@ -40,6 +38,31 @@ func _process(delta) ->void:
 		Global.verificadorDePause = true
 	else:
 		Global.verificadorDePause = false
+	if Global.validadorDoTutorial == true:
+		self.isPaused = true
+	else:
+		if self.visible == true:
+			self.isPaused = true
+		else:
+			self.isPaused = false
+			
+	if Global.idiomaEscolhido == 0:
+		$CenterContainer/VBoxContainer/Label.text = "PAUSADO"
+		$CenterContainer/VBoxContainer/Resumir.text = "Resumir"
+		$CenterContainer/VBoxContainer/Sair.text = "Sair"
+		
+	
+	elif Global.idiomaEscolhido == 1:
+		$CenterContainer/VBoxContainer/Label.text = "PAUSED"
+		$CenterContainer/VBoxContainer/Resumir.text = "Resume"
+		$CenterContainer/VBoxContainer/Sair.text = "Exit"
+		
+	
+	elif Global.idiomaEscolhido == 2: 
+		$CenterContainer/VBoxContainer/Label.text = "EN PAUSA"
+		$CenterContainer/VBoxContainer/Resumir.text = "Resumir"
+		$CenterContainer/VBoxContainer/Sair.text = "Salir"
+	
 
 
 
