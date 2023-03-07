@@ -78,7 +78,10 @@ func limiteHorizontal() ->void:
 	
 #Essa função aumenta a velocidade do caminhão em condição do aumento de pontos
 func alteradorDeVelocidade():
-	if Global.pontosArmazenados >= 2000 and Global.pontosArmazenados <= 5000:
+	if Global.pontosArmazenados <=2000:
+		multiplicadordeVelocidadeHorizontal = 270
+		multiplicadordeVelocidadeVertical = 500
+	elif Global.pontosArmazenados >= 2000 and Global.pontosArmazenados <= 5000:
 		multiplicadordeVelocidadeVertical = 750
 		$velocimetro/AnimatedSprite.frame = 1
 	elif Global.pontosArmazenados >= 5000 and Global.pontosArmazenados <= 9000:
