@@ -11,16 +11,16 @@ func _process(delta):
 
 #Função que realiza a troca para a cena inicial
 func _on_voltarParaOMenu_pressed():
-	get_tree().change_scene("res://Cenas/menuPrincipal.tscn")
+	get_tree().change_scene("res://Cenas/gameOver.tscn")
 	
 func idiomaModificador():
 	if Global.idiomaEscolhido == 0:
-		$voltarParaOMenu.text = "Voltar para o menu"
+		$voltarParaOMenu.text = "Continuar"
 	
 	elif Global.idiomaEscolhido == 1:
-		$voltarParaOMenu.text = "Back to menu"
+		$voltarParaOMenu.text = "Continue"
 		
 	
 	elif Global.idiomaEscolhido == 2: 
-		$voltarParaOMenu.text = "volver arriba"
+		$voltarParaOMenu.text = "Continuar"
 		

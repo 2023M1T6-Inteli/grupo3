@@ -33,7 +33,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.290196, 0.290196, 0.290196, 1 )
 custom_fonts/font = SubResource( 1 )
 disabled = true
-text = "Voltar para o menu"
 flat = true
 
 [node name="Relogio" type="KinematicBody2D" parent="."]
