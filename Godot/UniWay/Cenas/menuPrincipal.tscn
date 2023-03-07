@@ -4,10 +4,10 @@
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Assets/Assets/Highway Artwork/Layers/highway.png" type="Texture" id=3]
 [ext_resource path="res://Assets novos/Caminhão da Unipar.png" type="Texture" id=4]
-[ext_resource path="res://Assets/Titulo do jogo.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Assets/Assets/Highway Artwork/Layers/background-light.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Assets/Assets/Highway Artwork/Layers/highway-sky.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/caminhãoTelaInicial.gd" type="Script" id=8]
+[ext_resource path="res://Assets novos/Novo titulo Uniway 2.png" type="Texture" id=9]
 
 [sub_resource type="DynamicFontData" id=9]
 
@@ -103,9 +103,9 @@ scale = Vector2( 4.8, 4.5 )
 texture = ExtResource( 7 )
 
 [node name="TituloDoJogo" type="Sprite" parent="Highway-sky"]
-position = Vector2( -4.18311, -33.1343 )
-scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 5 )
+position = Vector2( -4.7917, -55.7778 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 9 )
 
 [node name="Background-light" type="Sprite" parent="Highway-sky"]
 position = Vector2( -176.569, 37.8358 )
@@ -125,9 +125,9 @@ anchor_top = 0.704
 anchor_right = 0.55
 anchor_bottom = 0.704
 margin_left = -256.0
-margin_top = -374.32
+margin_top = -301.32
 margin_right = 9.0
-margin_bottom = -46.32
+margin_bottom = 26.68
 theme = SubResource( 11 )
 custom_constants/separation = 50
 

@@ -17,6 +17,7 @@ func _ready():
 	#Essa mudança de valor da variável garante que o tutorial apareça se
 	#não houver movimentação horizontal do caminhão
 	Global.validadorDeMovimentoTutorial = true
+	Global.vidaDoCaminhao = 4
 
 #Função de física padrão do Godot para chamar funções de movimento
 func _physics_process(delta):
@@ -29,6 +30,10 @@ func _physics_process(delta):
 	velocidadeVertical = move_and_slide(velocidadeVertical)
 	#Realizar a movimentação vertical
 	velocidadeVertical.y = - multiplicadordeVelocidadeVertical
+	alteradorDeVelocidade()
+	atualizadorDeVida()
+	ajustadorDaVida()
+	
 	
 
 #Função para realizar o movimento horizontal do caminhão
@@ -69,5 +74,44 @@ func limiteHorizontal() ->void:
 		limitadorDeRotacionar = 1
 		limitadorHorizontalDireita = 1
 		limitadorHorizontalEsquerda = 1
+	
+	
+#Essa função aumenta a velocidade do caminhão em condição do aumento de pontos
+func alteradorDeVelocidade():
+	if Global.pontosArmazenados >= 2000 and Global.pontosArmazenados <= 5000:
+		multiplicadordeVelocidadeVertical = 750
+		$velocimetro/AnimatedSprite.frame = 1
+	elif Global.pontosArmazenados >= 5000 and Global.pontosArmazenados <= 9000:
+		multiplicadordeVelocidadeVertical = 1000
+		multiplicadordeVelocidadeHorizontal = 320
+		$velocimetro/AnimatedSprite.frame = 2
+	elif Global.pontosArmazenados >= 9000 and Global.pontosArmazenados <= 14000:
+		multiplicadordeVelocidadeVertical = 1250
+		multiplicadordeVelocidadeHorizontal = 370
+		$velocimetro/AnimatedSprite.frame = 3
+	elif Global.pontosArmazenados >= 14000 and Global.pontosArmazenados <= 20000:
+		multiplicadordeVelocidadeVertical = 1500
+		multiplicadordeVelocidadeHorizontal =420
+		$velocimetro/AnimatedSprite.frame = 4
+
+func atualizadorDeVida():
+	if Global.vidaDoCaminhao == 4:
+		$barraDeVida/AnimatedSprite.frame = 0
+	elif Global.vidaDoCaminhao == 3.5:
+		$barraDeVida/AnimatedSprite.frame = 1
+	elif Global.vidaDoCaminhao == 2.5:
+		$barraDeVida/AnimatedSprite.frame = 2
+	elif Global.vidaDoCaminhao == 1.5:
+		$barraDeVida/AnimatedSprite.frame = 3
+	elif Global.vidaDoCaminhao == 0:
+		$barraDeVida/AnimatedSprite.frame = 4
+		get_tree().change_scene("res://Cenas/Jornal1.tscn")
+	
+func ajustadorDaVida():
+	if Global.vidaDoCaminhao == 3 or Global.vidaDoCaminhao == 2 or Global.vidaDoCaminhao == 1:
+		$barraDeVida.global_position.y = $barraDeVida.global_position.y + 80
+		Global.vidaDoCaminhao += 0.5
+	if Global.vidaDoCaminhao == 0.5:
+		Global.vidaDoCaminhao = 0
 		
 

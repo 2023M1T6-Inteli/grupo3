@@ -17,3 +17,5 @@ var validadorDeMovimentoTutorial :bool
 #Se essa variável for igual a 2 o idioma é espanhol
 var idiomaEscolhido :float = 0
 
+var vidaDoCaminhao :float
+
