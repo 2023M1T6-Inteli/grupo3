@@ -442,6 +442,7 @@ mouse_filter = 2
 color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
 
 [node name="buraco" type="KinematicBody2D" parent="."]
+z_index = -1
 script = ExtResource( 21 )
 
 [node name="Area2D" type="Area2D" parent="buraco"]
@@ -479,6 +480,17 @@ shape = SubResource( 8 )
 [node name="Buraco" type="Sprite" parent="buraco/Area2D3/CollisionShape2D"]
 position = Vector2( 2, 1 )
 texture = ExtResource( 20 )
+
+[node name="pauseMask2" type="ColorRect" parent="buraco/Area2D3/CollisionShape2D/Buraco"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -7767.0
+margin_top = -11605.0
+margin_right = 7684.0
+margin_bottom = 4706.0
+mouse_filter = 2
+color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
 
 [connection signal="input_event" from="carrinho" to="carrinho" method="_on_carrinho_input_event"]
 [connection signal="body_entered" from="carrinho/Area2D" to="carrinho" method="_on_Area2D_body_entered"]

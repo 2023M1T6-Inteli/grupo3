@@ -22,15 +22,18 @@ func placarPista():
 func pauseMaskControlador() ->void:
 	if(Global.verificadorDePause == true):
 		$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = true
+		$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = true
 		$ParallaxBackground/pauseMask2.visible = true
 		$KinematicBody2D/Camera2D/Label.visible = false
 	else:
 		if Global.validadorDoTutorial == true:
 			$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = true
+			$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = true
 			$ParallaxBackground/pauseMask2.visible = true
 			$KinematicBody2D/Camera2D/Label.visible = true
 		else:
 			$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = false
+			$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = false
 			$ParallaxBackground/pauseMask2.visible = false
 			$KinematicBody2D/Camera2D/Label.visible = false
 			

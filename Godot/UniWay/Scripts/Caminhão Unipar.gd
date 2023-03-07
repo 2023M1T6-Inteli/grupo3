@@ -81,6 +81,7 @@ func alteradorDeVelocidade():
 	if Global.pontosArmazenados <=2000:
 		multiplicadordeVelocidadeHorizontal = 270
 		multiplicadordeVelocidadeVertical = 500
+		$velocimetro/AnimatedSprite.frame = 0
 	elif Global.pontosArmazenados >= 2000 and Global.pontosArmazenados <= 5000:
 		multiplicadordeVelocidadeVertical = 750
 		$velocimetro/AnimatedSprite.frame = 1
