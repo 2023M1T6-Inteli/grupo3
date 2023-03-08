@@ -13,9 +13,15 @@ func _process(delta):
 #funções que realizam a troca de cena caso o caminhão colida com os buracos
 func _on_Area2D_body_entered(body):
 	Global.vidaDoCaminhao -=1
+	if Global.vidaDoCaminhao >=1.5:
+		damageScene.danoVisual()
 
 func _on_Area2D2_body_entered(body):
 	Global.vidaDoCaminhao -=1
+	if Global.vidaDoCaminhao >=1.5:
+		damageScene.danoVisual()
 	
 func _on_Area2D3_body_entered(body):
 	Global.vidaDoCaminhao -=1
+	if Global.vidaDoCaminhao >=1.5:
+		damageScene.danoVisual()

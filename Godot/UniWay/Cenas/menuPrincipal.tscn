@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Assets/Assets/Highway Artwork/Layers/highway.png" type="Texture" id=3]
 [ext_resource path="res://Assets novos/Caminhão da Unipar.png" type="Texture" id=4]
-[ext_resource path="res://Assets novos/uniparLogo.png" type="Texture" id=5]
+[ext_resource path="res://Assets novos/Logo da Unipar.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Assets/Assets/Highway Artwork/Layers/background-light.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Assets/Assets/Highway Artwork/Layers/highway-sky.png" type="Texture" id=7]
 [ext_resource path="res://Scripts/caminhãoTelaInicial.gd" type="Script" id=8]
@@ -204,9 +204,9 @@ position = Vector2( 1730, 570 )
 scale = Vector2( 10, 10 )
 texture = ExtResource( 4 )
 
-[node name="UniparLogo" type="Sprite" parent="KinematicBody2D/caminhãoUnipar"]
-position = Vector2( -24.8999, 19.55 )
-scale = Vector2( 0.0535886, 0.0323308 )
+[node name="LogoDaUnipar" type="Sprite" parent="KinematicBody2D/caminhãoUnipar"]
+position = Vector2( -25, 19.6 )
+scale = Vector2( 0.103704, 0.08 )
 texture = ExtResource( 5 )
 
 [node name="VBoxIdioma" type="VBoxContainer" parent="."]

@@ -3,11 +3,14 @@ extends Node2D
 var quantidadesDePontos :int
 var pontos :String
 
+
 #Função que chama outras funções a cada frame do jogo
 func _process(delta):
 	placarPista()
 	pauseMaskControlador()
 	idiomaModificador()
+	
+	
 	
 	
 #Essa função declara os pontos a partir da posição Y do caminhão,
@@ -53,4 +56,6 @@ func idiomaModificador():
 		$KinematicBody2D/Camera2D/Label/Label.text = "Pulse cualquier tecla para continuar"
 		pontos = "Puntos "
 		
+
 	
+

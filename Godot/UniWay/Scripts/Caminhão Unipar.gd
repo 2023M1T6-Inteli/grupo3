@@ -114,3 +114,4 @@ func ajustadorDaVida():
 		Global.vidaDoCaminhao = 0
 		
 
+	

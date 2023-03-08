@@ -17,6 +17,7 @@ run/main_scene="res://Cenas/menuPrincipal.tscn"
 
 Global="*res://Scripts/Global.gd"
 transitionScene="*res://Cenas/cenaDeTransição.tscn"
+damageScene="*res://Cenas/cenaDeDano.tscn"
 
 [display]
 
