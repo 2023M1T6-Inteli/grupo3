@@ -40,14 +40,17 @@ func pauseMaskControlador() ->void:
 func idiomaModificador():
 	if Global.idiomaEscolhido == 0:
 		$KinematicBody2D/Camera2D/Label.text = "Para movimentar utilize os comandos abaixo"
+		$KinematicBody2D/Camera2D/Label/Label.text = "Pressione qualquer tecla para continuar"
 		pontos = "Pontos "
 	
 	elif Global.idiomaEscolhido == 1:
 		$KinematicBody2D/Camera2D/Label.text = "To move use the commands below"
+		$KinematicBody2D/Camera2D/Label/Label.text = "Press any key to continue"
 		pontos = "Points "
 	
 	elif Global.idiomaEscolhido == 2: 
 		$KinematicBody2D/Camera2D/Label.text = "Para mover usa los siguientes comandos"
+		$KinematicBody2D/Camera2D/Label/Label.text = "Pulse cualquier tecla para continuar"
 		pontos = "Puntos "
 		
 	
