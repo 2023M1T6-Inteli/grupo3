@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Highway Artwork/Layers/highway-sky.png" type="Texture" id=1]
 [ext_resource path="res://Assets novos/Cópia de adana (2).png" type="Texture" id=2]
@@ -13,16 +13,6 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 64
-outline_size = 3
-outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 64
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 63
 outline_size = 3
 outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
 font_data = ExtResource( 4 )
@@ -44,7 +34,7 @@ position = Vector2( 952, 176 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 2 )
 
-[node name="Button" type="Button" parent="."]
+[node name="retorno" type="Button" parent="."]
 margin_left = 574.0
 margin_top = 948.0
 margin_right = 1365.0
@@ -62,19 +52,4 @@ margin_bottom = 543.0
 custom_fonts/font = SubResource( 2 )
 text = "PONTOS:"
 
-[node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 838.0
-margin_top = 621.0
-margin_right = 1411.0
-margin_bottom = 729.0
-custom_fonts/font = SubResource( 4 )
-
-[node name="Label2" type="Label" parent="."]
-margin_left = 163.0
-margin_top = 633.0
-margin_right = 794.0
-margin_bottom = 708.0
-custom_fonts/font = SubResource( 3 )
-text = "Insira seu nome:"
-
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="retorno" to="." method="_on_retorno_pressed"]

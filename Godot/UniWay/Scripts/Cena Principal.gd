@@ -49,7 +49,7 @@ func idiomaModificador():
 	elif Global.idiomaEscolhido == 1:
 		$KinematicBody2D/Camera2D/Label.text = "To move use the commands below"
 		$KinematicBody2D/Camera2D/Label/Label.text = "Press any key to continue"
-		pontos = "Points "
+		pontos = "Score "
 	
 	elif Global.idiomaEscolhido == 2: 
 		$KinematicBody2D/Camera2D/Label.text = "Para mover usa los siguientes comandos"

@@ -6,7 +6,12 @@ onready var caminhao = get_node("KinematicBody2D")
 #Essa função valida o movimento do caminhão quando 
 #o botão "START" é pressionado
 func _on_StartButton_pressed():
-	caminhao.verificadorDeMovimento = true
+	$"Highway-sky/TituloDoJogo".visible = false
+	$control.visible = false
+	$gitHub.visible = false
+	$Unipar.visible = false
+	$LineEdit.visible = true
+	
 
 #Essa função troca para a tela dos controles ao clicar em "controles"
 func _on_Idioma_pressed(): 
@@ -78,6 +83,8 @@ func _process(delta):
 		$Idioma.set_position(Vector2(638,98))
 		$VoltarIdioma.text = "Voltar"
 		$gitHub.text = "Quem Somos"
+		$LineEdit/Label.text = "insira seu nome"
+		$LineEdit/Label/continuar.text = "Continuar"
 	
 	elif Global.idiomaEscolhido == 1:
 		$control/StartButton.text = "Start"
@@ -87,6 +94,8 @@ func _process(delta):
 		$Idioma.set_position(Vector2(540,98))
 		$VoltarIdioma.text = "Back"
 		$gitHub.text = "who we are"
+		$LineEdit/Label.text = "enter your name"
+		$LineEdit/Label/continuar.text = "Continue"
 	
 	elif Global.idiomaEscolhido == 2:
 		$control/StartButton.text = "comenzar"
@@ -96,6 +105,8 @@ func _process(delta):
 		$Idioma.set_position(Vector2(638,98))
 		$VoltarIdioma.text = "volver"
 		$gitHub.text = "quienes somos"
+		$LineEdit/Label.text = "introduzca su nombre"
+		$LineEdit/Label/continuar.text = "Continuar"
 
 
 func _on_gitHub_pressed():
@@ -105,3 +116,9 @@ func _on_gitHub_pressed():
 
 func _on_Unipar_pressed():
 	OS.shell_open("https://www.unipar.com/")
+
+
+
+func _on_continuar_pressed():
+	Global.nomeDoJogador = String($LineEdit.text)
+	caminhao.verificadorDeMovimento = true

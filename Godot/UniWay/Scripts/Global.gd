@@ -17,3 +17,5 @@ var idiomaEscolhido :float = 0
 
 var vidaDoCaminhao :float
 
+var nomeDoJogador :String
+
