@@ -13,7 +13,7 @@ func _on_StartButton_pressed():
 	$LineEdit.visible = true
 	
 
-#Essa função troca para a tela dos controles ao clicar em "controles"
+#Essa função abre o menu de seleção de idiomas
 func _on_Idioma_pressed(): 
 	$"Highway-sky/TituloDoJogo".visible = false
 	$control.visible = false
@@ -29,7 +29,7 @@ func _on_Exit_pressed():
 	get_tree().quit() # Essa função faz fechar o jogo ao clicar em "sair"
 	
 
-
+#Função que muda o idioma para PT-BR
 func _on_PTBR_pressed():
 	$"Highway-sky/TituloDoJogo".visible = true
 	$control.visible = true
@@ -40,7 +40,7 @@ func _on_PTBR_pressed():
 	$VoltarIdioma.visible = false
 	Global.idiomaEscolhido = 0
 	
-	
+#Função que muda o idioma para inglês
 func _on_English_pressed():
 	$"Highway-sky/TituloDoJogo".visible = true
 	$control.visible = true
@@ -51,7 +51,7 @@ func _on_English_pressed():
 	$VoltarIdioma.visible = false
 	Global.idiomaEscolhido = 1
 
-
+#Função que muda o idioma para espanhol
 func _on_Spanish_pressed():
 	$"Highway-sky/TituloDoJogo".visible = true
 	$control.visible = true
@@ -64,7 +64,7 @@ func _on_Spanish_pressed():
 	
 
 
-
+#Função que sai do menu de seleção de idioma sem alterar o idioma
 func _on_VoltarIdioma_pressed():
 	$"Highway-sky/TituloDoJogo".visible = true
 	$control.visible = true
@@ -122,3 +122,6 @@ func _on_Unipar_pressed():
 func _on_continuar_pressed():
 	Global.nomeDoJogador = String($LineEdit.text)
 	caminhao.verificadorDeMovimento = true
+
+func _enter_tree():
+	DataSave.loadData()
