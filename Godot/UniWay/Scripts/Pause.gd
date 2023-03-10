@@ -31,7 +31,7 @@ func _on_Sair_pressed():
 	self.isPaused = false
 	get_tree().change_scene("res://Cenas/menuPrincipal.tscn")
 	
-#Função que armazena um valor verdadeiro ou falso de acordo
+#Função que armazena valores verdadeiro ou falso de acordo
 #com a visibilidade do menu de pause
 func _process(delta) ->void:
 	if(self.visible == true):
@@ -45,7 +45,8 @@ func _process(delta) ->void:
 			self.isPaused = true
 		else:
 			self.isPaused = false
-			
+
+#Função que altera palavras de acordo com o idioma escolhido
 	if Global.idiomaEscolhido == 0:
 		$CenterContainer/VBoxContainer/Label.text = "PAUSADO"
 		$CenterContainer/VBoxContainer/Resumir.text = "Resumir"

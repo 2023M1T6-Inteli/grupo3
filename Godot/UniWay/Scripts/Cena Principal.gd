@@ -1,5 +1,8 @@
 extends Node2D
 
+
+#Criação de variáveis para armazenar a quantidade de pontos e
+#mostrar eles na tela
 var quantidadesDePontos :int
 var pontos :String
 
@@ -40,6 +43,7 @@ func pauseMaskControlador() ->void:
 			$ParallaxBackground/pauseMask2.visible = false
 			$KinematicBody2D/Camera2D/Label.visible = false
 			
+#Função que modifica os textos de acordo com o idioma escolhido
 func idiomaModificador():
 	if Global.idiomaEscolhido == 0:
 		$KinematicBody2D/Camera2D/Label.text = "Para movimentar utilize os comandos abaixo"

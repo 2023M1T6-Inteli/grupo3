@@ -3,8 +3,8 @@ extends Control
 #Termo que permite acessar variáveis de outros scripts
 onready var caminhao = get_node("KinematicBody2D")
 
-#Essa função valida o movimento do caminhão quando 
-#o botão "START" é pressionado
+#Essa função prossegue a linha do jogo fazendo a aba de
+#inserir o nome aparecer ao clickar no botão "START"
 func _on_StartButton_pressed():
 	$"Highway-sky/TituloDoJogo".visible = false
 	$control.visible = false
@@ -75,6 +75,7 @@ func _on_VoltarIdioma_pressed():
 	$VoltarIdioma.visible = false
 
 func _process(delta):
+#Condições que realizam a troca de palavras de acordo com o idioma escolhido
 	if Global.idiomaEscolhido == 0:
 		$control/StartButton.text = "Iniciar"
 		$control/Idioma.text = "Idioma"
@@ -108,20 +109,22 @@ func _process(delta):
 		$LineEdit/Label.text = "introduzca su nombre"
 		$LineEdit/Label/continuar.text = "Continuar"
 
-
+#Botão que redireciona para a nossa pagina do GitHub
 func _on_gitHub_pressed():
 	OS.shell_open("https://github.com/2023M1T6-Inteli/grupo3")
 
 
-
+#Botão que redireciona para a página web do site da unipar
 func _on_Unipar_pressed():
 	OS.shell_open("https://www.unipar.com/")
 
 
-
+#Botão que valida o movimento do caminhão para prosseguir para a
+#proxima cena
 func _on_continuar_pressed():
 	Global.nomeDoJogador = String($LineEdit.text)
 	caminhao.verificadorDeMovimento = true
 
+#Toda vez que entrar nessa cena os dados salvos na maquina são carregados
 func _enter_tree():
 	DataSave.loadData()

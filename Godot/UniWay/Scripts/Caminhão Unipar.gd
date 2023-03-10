@@ -29,6 +29,7 @@ func _physics_process(delta):
 	#Realizar a movimentação vertical
 	velocidadeVertical.y = - multiplicadordeVelocidadeVertical
 	alteradorDeVelocidade()
+	#Chama funções que vão modificar a vida
 	atualizadorDeVida()
 	ajustadorDaVida()
 	
@@ -93,6 +94,7 @@ func alteradorDeVelocidade():
 		multiplicadordeVelocidadeHorizontal =420
 		$velocimetro/AnimatedSprite.frame = 4
 
+#Essa função muda a vida do caminhão caso ocorra modificação na variável Global vida
 func atualizadorDeVida():
 	if Global.vidaDoCaminhao == 4:
 		$barraDeVida/AnimatedSprite.frame = 0
@@ -106,6 +108,7 @@ func atualizadorDeVida():
 		$barraDeVida/AnimatedSprite.frame = 4
 		get_tree().change_scene("res://Cenas/Jornal1.tscn")
 	
+#Essa função auxilia na mudança de vida devido um problema na sprite
 func ajustadorDaVida():
 	if Global.vidaDoCaminhao == 3 or Global.vidaDoCaminhao == 2 or Global.vidaDoCaminhao == 1:
 		$barraDeVida.global_position.y = $barraDeVida.global_position.y + 80

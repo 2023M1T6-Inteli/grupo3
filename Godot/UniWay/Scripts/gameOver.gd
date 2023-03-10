@@ -1,16 +1,20 @@
 extends Control
+
+#Variáveis que armazenam textos
 var pontos = 'pontos: '
 var nome = "Seu nome: "
 
 
-
+#Função chamada a cada frame do jogo 
 func _process(delta):
+	#Altera os textos da tela de Gamer Over para se adaptar ao nome e pontos 
+	#do jogador
 	$pontos.text = pontos + String(Global.pontosArmazenados)
 	$nome.text = nome + String(Global.nomeDoJogador)
 	alteradorDeIdioma()
 	alteradorDeRanking()
 	
-
+#Função que altera as palavras de acordo com o idioma escolhido 
 func alteradorDeIdioma():
 	if Global.idiomaEscolhido == 0:
 		pontos = 'Seus Pontos: '
@@ -34,10 +38,11 @@ func alteradorDeIdioma():
 		$os5Melhores.text = "los 5 mejores"
 		$voltar.text = "volver"
 
-
+#Função que retorna a cena inicial quando o botão de retorno é pressionado 
 func _on_retorno_pressed():
 	get_tree().change_scene("res://Cenas/menuPrincipal.tscn")
 	
+#Função que realiza o sistema de ranking
 func sistemaDeRank():
 	if Global.pontosArmazenados > DataSave.pontosJogador1 and Global.pontosArmazenados:
 		DataSave.pontosJogador5 = DataSave.pontosJogador4
@@ -81,7 +86,7 @@ func sistemaDeRank():
 					else:
 						pass
 
-
+#Função que mostra o ranking na tela
 func alteradorDeRanking():
 	if DataSave.pontosJogador1 > 0:
 		$os5Melhores/top1.text = DataSave.nomeJogador1 + " -> " + String(DataSave.pontosJogador1)
@@ -104,7 +109,7 @@ func alteradorDeRanking():
 	else:
 		$os5Melhores/top5.text = ""
 
-
+#Função que mostra a tela de ranking
 func _on_Ranking_pressed():
 	$gamerOver.visible = false
 	$retorno.visible = false
@@ -115,7 +120,7 @@ func _on_Ranking_pressed():
 	$voltar.visible = true
 
 
-	
+#Função que volta para a tela de game over
 func _on_voltar_pressed():
 	$gamerOver.visible = true
 	$retorno.visible = true
@@ -124,9 +129,11 @@ func _on_voltar_pressed():
 	$Ranking.visible = true
 	$os5Melhores.visible = false
 	$voltar.visible = false
-	
+
+#Função que salva os dados do jogo quando se sai dessa cena
 func _exit_tree():
 	DataSave.saveData()
 
+#função que é chamada quando se entra nessa cena
 func _enter_tree():
 	sistemaDeRank()

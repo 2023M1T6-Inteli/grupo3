@@ -9,10 +9,11 @@ func _process(delta):
 		$voltarParaOMenu.disabled = false
 	idiomaModificador()
 
-#Função que realiza a troca para a cena inicial
+#Função que realiza a troca para a cena de Game Over
 func _on_voltarParaOMenu_pressed():
 	get_tree().change_scene("res://Cenas/gameOver.tscn")
-	
+
+#Função que realiza a troca de palavras de acordo como o idioma escolhido
 func idiomaModificador():
 	if Global.idiomaEscolhido == 0:
 		$voltarParaOMenu.text = "Continuar"

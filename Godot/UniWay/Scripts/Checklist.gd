@@ -20,6 +20,9 @@ func _on_Button4_pressed():
 func _process(delta):
 	if($"Check(Checklist)1".visible == true && $"Check(Checklist)2".visible == true && $"Check(Checklist)3".visible == true && $"Check(Checklist)4".visible == true):
 		$continuar.disabled = false
+	
+#Essa função altera as palavras de acordo com o idioma escolhido 
+func alteradorDeIdioma():
 	if Global.idiomaEscolhido == 0:
 		$Button1.text = "Arrumar Freios"
 		$Button2.text = "Verificar  Motor"
@@ -41,8 +44,7 @@ func _process(delta):
 		$Button3.text = "alinear ejes"
 		$Button4.text = "calibrar ruedas"
 		$continuar.text = "Continuar"
-			
-
+	
 
 #Função de troca de cena
 func _on_continuar_pressed():

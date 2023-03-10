@@ -10,7 +10,8 @@ func _process(delta):
 		$Area2D3.global_position.y = Global.posicionamentoDoJogador - 2128
 		
 
-#funções que realizam a troca de cena caso o caminhão colida com os buracos
+#funções que diminuem a vida do caminhão no escobo Global e rodam uma animação que
+#sugere o dano no caminhão
 func _on_Area2D_body_entered(body):
 	Global.vidaDoCaminhao -=1
 	if Global.vidaDoCaminhao >=1.5:

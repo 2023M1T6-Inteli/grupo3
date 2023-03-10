@@ -15,6 +15,7 @@ var validadorDoTutorial :bool = true
 #Se essa variável for igual a 2 o idioma é espanhol
 var idiomaEscolhido :float = 0
 
+#Vida do caminhão começa em 4
 var vidaDoCaminhao :float
 
 var nomeDoJogador :String
