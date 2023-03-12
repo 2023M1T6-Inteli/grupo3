@@ -6,7 +6,9 @@ extends Node2D
 var quantidadesDePontos :int
 var pontos :String
 
-
+func _ready():
+	#Começa a tocar o som do motor do caminhão 
+	$KinematicBody2D/musicaDeFundo.play()
 #Função que chama outras funções a cada frame do jogo
 func _process(delta):
 	placarPista()
@@ -60,6 +62,5 @@ func idiomaModificador():
 		$KinematicBody2D/Camera2D/Label/Label.text = "Pulse cualquier tecla para continuar"
 		pontos = "Puntos "
 		
-
 	
 
