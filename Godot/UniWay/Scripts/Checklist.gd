@@ -1,20 +1,24 @@
 extends Control
 
 
-
+var confirmaContinuar :bool
 #Essas funções fazem com que apareça o certinho do checklist quando
 #o seu respectivo botão for pressionado
 func _on_Button1_pressed():
 	$"Check(Checklist)1".visible = true
+	$somChecklist.play()
 
 func _on_Button2_pressed():
 	$"Check(Checklist)2".visible = true
+	$somChecklist.play()
 
 func _on_Button3_pressed():
 	$"Check(Checklist)3".visible = true
+	$somChecklist.play()
 	
 func _on_Button4_pressed():
 	$"Check(Checklist)4".visible = true
+	$somChecklist.play()
 
 #Essa função habilita o botão continuar se todos os checklist estiverem feitos
 func _process(delta):
@@ -48,5 +52,8 @@ func alteradorDeIdioma():
 
 #Função de troca de cena
 func _on_continuar_pressed():
+	$somContinuar.play()
 	transitionScene.trocaDeCena()
+	confirmaContinuar = true
 	get_tree().change_scene("res://Cenas/Novo Nivel Principal.tscn")
+	

@@ -6,6 +6,7 @@ onready var caminhao = get_node("KinematicBody2D")
 #Essa função prossegue a linha do jogo fazendo a aba de
 #inserir o nome aparecer ao clickar no botão "START"
 func _on_StartButton_pressed():
+	$somCorreto.play()
 	$"Highway-sky/TituloDoJogo".visible = false
 	$control.visible = false
 	$gitHub.visible = false
@@ -122,6 +123,7 @@ func _on_Unipar_pressed():
 #Botão que valida o movimento do caminhão para prosseguir para a
 #proxima cena
 func _on_continuar_pressed():
+	$somCorreto.play()
 	Global.nomeDoJogador = String($LineEdit.text)
 	caminhao.verificadorDeMovimento = true
 

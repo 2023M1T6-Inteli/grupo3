@@ -13,6 +13,7 @@ var limitadorDeRotacionar :float
 var limitadorHorizontalDireita :float
 var limitadorHorizontalEsquerda :float
 
+var controladorDoTurbo :bool = false
 func _ready():
 #Essa mudança na variável faz com que o caminhão sempre comece com vida cheia
 	Global.vidaDoCaminhao = 4
@@ -32,6 +33,7 @@ func _physics_process(delta):
 	#Chama funções que vão modificar a vida
 	atualizadorDeVida()
 	ajustadorDaVida()
+	funcionamentoDoTurbo()
 	
 	
 
@@ -86,14 +88,30 @@ func alteradorDeVelocidade():
 		multiplicadordeVelocidadeHorizontal = 320
 		$velocimetro/AnimatedSprite.frame = 2
 	elif Global.pontosArmazenados >= 9000 and Global.pontosArmazenados <= 14000:
+		controladorDoTurbo = true
 		multiplicadordeVelocidadeVertical = 1250
 		multiplicadordeVelocidadeHorizontal = 370
 		$velocimetro/AnimatedSprite.frame = 3
 	elif Global.pontosArmazenados >= 14000 and Global.pontosArmazenados <= 20000:
+		controladorDoTurbo = true
 		multiplicadordeVelocidadeVertical = 1500
 		multiplicadordeVelocidadeHorizontal =420
 		$velocimetro/AnimatedSprite.frame = 4
 
+func funcionamentoDoTurbo():
+	if Global.pontosArmazenados == 2000:
+		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
+	elif Global.pontosArmazenados == 5000:
+		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
+	elif Global.pontosArmazenados == 9000:
+		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
+	elif Global.pontosArmazenados == 14000:
+		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
+	
+		
+		
+	
+	
 #Essa função muda a vida do caminhão caso ocorra modificação na variável Global vida
 func atualizadorDeVida():
 	if Global.vidaDoCaminhao == 4:
