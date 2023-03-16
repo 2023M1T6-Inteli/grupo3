@@ -53,6 +53,7 @@ func alteradorDeIdioma():
 #Função de troca de cena
 func _on_continuar_pressed():
 	$somContinuar.play()
+	yield(get_tree().create_timer(1),"timeout")
 	transitionScene.trocaDeCena()
 	confirmaContinuar = true
 	get_tree().change_scene("res://Cenas/Novo Nivel Principal.tscn")
