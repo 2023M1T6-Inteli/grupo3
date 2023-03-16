@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=2]
@@ -108,6 +108,12 @@ font_data = ExtResource( 1 )
 size = 64
 outline_size = 3
 outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 64
+outline_size = 4
+outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
 font_data = ExtResource( 1 )
 
 [node name="Tela inicial" type="Control"]
@@ -339,6 +345,17 @@ flat = true
 
 [node name="somCorreto" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 10 )
+
+[node name="Top 5" type="Button" parent="."]
+margin_left = 1684.0
+margin_top = 17.0
+margin_right = 1896.0
+margin_bottom = 99.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
+custom_fonts/font = SubResource( 23 )
+text = "Top 5"
+flat = true
 
 [connection signal="pressed" from="control/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="control/Idioma" to="." method="_on_Idioma_pressed"]
