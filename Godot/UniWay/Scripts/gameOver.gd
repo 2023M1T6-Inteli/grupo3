@@ -86,7 +86,7 @@ func sistemaDeRank():
 					else:
 						pass
 
-#Função que mostra o ranking na tela
+#Função que altera o ranking da tela
 func alteradorDeRanking():
 	if DataSave.pontosJogador1 > 0:
 		$os5Melhores/top1.text = DataSave.nomeJogador1 + " -> " + String(DataSave.pontosJogador1)

@@ -11,6 +11,7 @@ func _on_StartButton_pressed():
 	$control.visible = false
 	$gitHub.visible = false
 	$Unipar.visible = false
+	$"Top 5".visible = false
 	$LineEdit.visible = true
 	
 
@@ -20,6 +21,7 @@ func _on_Idioma_pressed():
 	$control.visible = false
 	$gitHub.visible = false
 	$Unipar.visible = false
+	$"Top 5".visible = false
 	$Idioma.visible = true
 	$VBoxIdioma.visible = true
 	$VoltarIdioma.visible = true
@@ -36,6 +38,7 @@ func _on_PTBR_pressed():
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
+	$"Top 5".visible = true
 	$Idioma.visible = false
 	$VBoxIdioma.visible = false
 	$VoltarIdioma.visible = false
@@ -47,6 +50,7 @@ func _on_English_pressed():
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
+	$"Top 5".visible = true
 	$Idioma.visible = false
 	$VBoxIdioma.visible = false
 	$VoltarIdioma.visible = false
@@ -58,6 +62,7 @@ func _on_Spanish_pressed():
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
+	$"Top 5".visible = true
 	$Idioma.visible = false
 	$VBoxIdioma.visible = false
 	$VoltarIdioma.visible = false
@@ -71,6 +76,7 @@ func _on_VoltarIdioma_pressed():
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
+	$"Top 5".visible = true
 	$Idioma.visible = false
 	$VBoxIdioma.visible = false
 	$VoltarIdioma.visible = false
@@ -130,3 +136,50 @@ func _on_continuar_pressed():
 #Toda vez que entrar nessa cena os dados salvos na maquina são carregados
 func _enter_tree():
 	DataSave.loadData()
+
+
+func _on_Top_5_pressed():
+	alteradorDeRanking()
+	$"Highway-sky/TituloDoJogo".visible = false
+	$control.visible = false
+	$gitHub.visible = false
+	$Unipar.visible = false
+	$"Top 5".visible = false
+	$"Título Top 5".visible = true
+	$voltarRanking.visible = true
+	$voltarRanking.visible = true
+
+
+
+#Função que altera o ranking na tela
+func alteradorDeRanking():
+	if DataSave.pontosJogador1 > 0:
+		$"Título Top 5/Top1".text = DataSave.nomeJogador1 + " -> " + String(DataSave.pontosJogador1)
+	else:
+		$"Título Top 5/Top1".text = ""
+	if DataSave.pontosJogador2 > 0:
+		$"Título Top 5/Top2".text = DataSave.nomeJogador2 + " -> " + String(DataSave.pontosJogador2)
+	else:
+		$"Título Top 5/Top2".text = ""
+	if DataSave.pontosJogador3 > 0:
+		$"Título Top 5/Top3".text = DataSave.nomeJogador3 + " -> " + String(DataSave.pontosJogador3)
+	else:
+		$"Título Top 5/Top3".text = ""
+	if DataSave.pontosJogador4 > 0:
+		$"Título Top 5/Top4".text = DataSave.nomeJogador4 + " -> " + String(DataSave.pontosJogador4)
+	else:
+		$"Título Top 5/Top4".text = ""
+	if DataSave.pontosJogador5 > 0:
+		$"Título Top 5/Top5".text = DataSave.nomeJogador5 + " -> " + String(DataSave.pontosJogador5)
+	else:
+		$"Título Top 5/Top5".text = ""
+
+func _on_voltarRanking_pressed():
+	$"Highway-sky/TituloDoJogo".visible = true
+	$control.visible = true
+	$gitHub.visible = true
+	$Unipar.visible = true
+	$"Top 5".visible = true
+	$"Título Top 5".visible = false
+	$voltarRanking.visible = false
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=2]
@@ -111,6 +111,24 @@ outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=23]
+size = 64
+outline_size = 4
+outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 64
+outline_size = 4
+outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 64
+outline_size = 4
+outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=26]
 size = 64
 outline_size = 4
 outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
@@ -347,14 +365,76 @@ flat = true
 stream = ExtResource( 10 )
 
 [node name="Top 5" type="Button" parent="."]
-margin_left = 1684.0
-margin_top = 17.0
-margin_right = 1896.0
-margin_bottom = 99.0
+margin_left = 1701.0
+margin_top = 5.0
+margin_right = 1913.0
+margin_bottom = 87.0
 custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
 custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 23 )
 text = "Top 5"
+flat = true
+
+[node name="Título Top 5" type="Label" parent="."]
+visible = false
+margin_top = 17.0
+margin_right = 1920.0
+margin_bottom = 93.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_fonts/font = SubResource( 24 )
+text = "os 5 melhores"
+align = 1
+
+[node name="Top1" type="Label" parent="Título Top 5"]
+margin_top = 225.0
+margin_right = 1920.0
+margin_bottom = 301.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_fonts/font = SubResource( 25 )
+align = 1
+
+[node name="Top2" type="Label" parent="Título Top 5"]
+margin_top = 325.0
+margin_right = 1920.0
+margin_bottom = 401.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_fonts/font = SubResource( 25 )
+align = 1
+
+[node name="Top3" type="Label" parent="Título Top 5"]
+margin_top = 425.0
+margin_right = 1920.0
+margin_bottom = 501.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_fonts/font = SubResource( 25 )
+align = 1
+
+[node name="Top4" type="Label" parent="Título Top 5"]
+margin_top = 525.0
+margin_right = 1920.0
+margin_bottom = 601.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_fonts/font = SubResource( 25 )
+align = 1
+
+[node name="Top5" type="Label" parent="Título Top 5"]
+margin_top = 625.0
+margin_right = 1920.0
+margin_bottom = 701.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_fonts/font = SubResource( 25 )
+align = 1
+
+[node name="voltarRanking" type="Button" parent="."]
+visible = false
+margin_left = 13.0
+margin_top = 12.0
+margin_right = 270.0
+margin_bottom = 94.0
+custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
+custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
+custom_fonts/font = SubResource( 26 )
+text = "voltar"
 flat = true
 
 [connection signal="pressed" from="control/StartButton" to="." method="_on_StartButton_pressed"]
@@ -367,3 +447,5 @@ flat = true
 [connection signal="pressed" from="gitHub" to="." method="_on_gitHub_pressed"]
 [connection signal="pressed" from="Unipar" to="." method="_on_Unipar_pressed"]
 [connection signal="pressed" from="LineEdit/Label/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Top 5" to="." method="_on_Top_5_pressed"]
+[connection signal="pressed" from="voltarRanking" to="." method="_on_voltarRanking_pressed"]
