@@ -22,12 +22,15 @@ func _on_Button4_pressed():
 
 #Essa função habilita o botão continuar se todos os checklist estiverem feitos
 func _process(delta):
+	#chama a função de alterar o idioma
+	alteradorDeIdioma()
 	if($"Check(Checklist)1".visible == true && $"Check(Checklist)2".visible == true && $"Check(Checklist)3".visible == true && $"Check(Checklist)4".visible == true):
 		$continuar.disabled = false
 	
 #Essa função altera as palavras de acordo com o idioma escolhido 
 func alteradorDeIdioma():
 	if Global.idiomaEscolhido == 0:
+		print("portugues")
 		$Button1.text = "Arrumar Freios"
 		$Button2.text = "Verificar  Motor"
 		$Button3.text = "Alinhar eixos"
@@ -35,6 +38,7 @@ func alteradorDeIdioma():
 		$continuar.text = "Continuar"
 	
 	elif Global.idiomaEscolhido == 1:
+		print("inglês")
 		$Button1.text = "fix brakes"
 		$Button2.text = "Check Engine"
 		$Button3.text = "align axes"
