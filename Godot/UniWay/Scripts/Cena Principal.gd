@@ -9,6 +9,7 @@ var pontos :String
 func _ready():
 	#Começa a tocar o som do motor do caminhão 
 	$KinematicBody2D/musicaDeFundo.play()
+	Global.verificadorGarantirPontos = false
 #Função que chama outras funções a cada frame do jogo
 func _process(delta):
 	placarPista()
@@ -79,12 +80,13 @@ func idiomaModificador():
 		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "volver"
 		
 func _unhandled_input(event):
-	if event.is_action_pressed("garantirPontos"):
-		if Global.verificadorDePause == false:
-			if Global.verificadorGarantirPontos == false:
-				Global.verificadorGarantirPontos = true
-			else:
-				Global.verificadorGarantirPontos = false
+	if Global.validadorDoTutorial == false:
+		if event.is_action_pressed("garantirPontos"):
+			if Global.verificadorDePause == false:
+				if Global.verificadorGarantirPontos == false:
+					Global.verificadorGarantirPontos = true
+				else:
+					Global.verificadorGarantirPontos = false
 	
 
 func _on_continuar_pressed():

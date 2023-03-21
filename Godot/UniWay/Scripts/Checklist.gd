@@ -30,7 +30,6 @@ func _process(delta):
 #Essa função altera as palavras de acordo com o idioma escolhido 
 func alteradorDeIdioma():
 	if Global.idiomaEscolhido == 0:
-		print("portugues")
 		$Button1.text = "Arrumar Freios"
 		$Button2.text = "Verificar  Motor"
 		$Button3.text = "Alinhar eixos"
@@ -38,7 +37,6 @@ func alteradorDeIdioma():
 		$continuar.text = "Continuar"
 	
 	elif Global.idiomaEscolhido == 1:
-		print("inglês")
 		$Button1.text = "fix brakes"
 		$Button2.text = "Check Engine"
 		$Button3.text = "align axes"
