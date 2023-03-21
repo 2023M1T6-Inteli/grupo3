@@ -3,6 +3,9 @@ extends Control
 #Termo que permite acessar variáveis de outros scripts
 onready var relogio = get_node("Relogio")
 
+
+func _ready():
+	Global.pontosArmazenados = 0
 #Função que habilita a visualização do botão
 func _process(delta):
 	if relogio.validadorDoRelogio == true:

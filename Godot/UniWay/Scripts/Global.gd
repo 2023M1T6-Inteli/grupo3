@@ -20,3 +20,4 @@ var vidaDoCaminhao :float
 
 var nomeDoJogador :String
 
+var verificadorGarantirPontos :bool

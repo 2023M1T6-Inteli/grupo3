@@ -33,6 +33,11 @@ func pauseMaskControlador() ->void:
 		$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = true
 		$ParallaxBackground/pauseMask2.visible = true
 		$KinematicBody2D/Camera2D/Label.visible = false
+	elif Global.verificadorGarantirPontos:
+		$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = true
+		$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = true
+		$ParallaxBackground/pauseMask2.visible = true
+		$KinematicBody2D/Camera2D/garantirPontos.visible = true
 	else:
 		if Global.validadorDoTutorial == true:
 			$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = true
@@ -44,6 +49,8 @@ func pauseMaskControlador() ->void:
 			$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = false
 			$ParallaxBackground/pauseMask2.visible = false
 			$KinematicBody2D/Camera2D/Label.visible = false
+			$KinematicBody2D/Camera2D/garantirPontos.visible = false
+		
 			
 #Função que modifica os textos de acordo com o idioma escolhido
 func idiomaModificador():
@@ -51,16 +58,42 @@ func idiomaModificador():
 		$KinematicBody2D/Camera2D/Label.text = "Para movimentar utilize os comandos abaixo"
 		$KinematicBody2D/Camera2D/Label/Label.text = "Pressione qualquer tecla para continuar"
 		pontos = "Pontos "
-	
+		$KinematicBody2D/Camera2D/Label/Label2.text = "Para garantir seus pontos use o comando abaixo"
+		$KinematicBody2D/Camera2D/garantirPontos.text  = "Garantir pontos"
+		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "voltar"
+		
 	elif Global.idiomaEscolhido == 1:
 		$KinematicBody2D/Camera2D/Label.text = "To move use the commands below"
 		$KinematicBody2D/Camera2D/Label/Label.text = "Press any key to continue"
 		pontos = "Score "
+		$KinematicBody2D/Camera2D/Label/Label2.text = "To secure your points use the command below"
+		$KinematicBody2D/Camera2D/garantirPontos.text  = "secure points"
+		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "back"
 	
 	elif Global.idiomaEscolhido == 2: 
 		$KinematicBody2D/Camera2D/Label.text = "Para mover usa los siguientes comandos"
 		$KinematicBody2D/Camera2D/Label/Label.text = "Pulse cualquier tecla para continuar"
 		pontos = "Puntos "
+		$KinematicBody2D/Camera2D/Label/Label2.text = "Para asegurar sus puntos, use el siguiente comando"
+		$KinematicBody2D/Camera2D/garantirPontos.text  = "puntos seguros"
+		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "volver"
 		
+func _unhandled_input(event):
+	if event.is_action_pressed("garantirPontos"):
+		if Global.verificadorDePause == false:
+			if Global.verificadorGarantirPontos == false:
+				Global.verificadorGarantirPontos = true
+			else:
+				Global.verificadorGarantirPontos = false
 	
 
+func _on_continuar_pressed():
+	Global.verificadorGarantirPontos = false
+	$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = false
+	$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = false
+	$ParallaxBackground/pauseMask2.visible = false
+	$KinematicBody2D/Camera2D/garantirPontos.visible = false
+
+
+func _on_garantirPontos_pressed():
+	get_tree().change_scene("res://Cenas/gameOver.tscn")

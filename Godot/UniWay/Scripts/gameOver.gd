@@ -4,7 +4,6 @@ extends Control
 var pontos = 'pontos: '
 var nome = "Seu nome: "
 
-
 #Função chamada a cada frame do jogo 
 func _process(delta):
 	#Altera os textos da tela de Gamer Over para se adaptar ao nome e pontos 
@@ -111,7 +110,7 @@ func alteradorDeRanking():
 
 #Função que mostra a tela de ranking
 func _on_Ranking_pressed():
-	$gamerOver.visible = false
+	$Fim.visible = false
 	$retorno.visible = false
 	$pontos.visible = false
 	$nome.visible = false
@@ -122,7 +121,7 @@ func _on_Ranking_pressed():
 
 #Função que volta para a tela de game over
 func _on_voltar_pressed():
-	$gamerOver.visible = true
+	$Fim.visible = true
 	$retorno.visible = true
 	$pontos.visible = true
 	$nome.visible = true

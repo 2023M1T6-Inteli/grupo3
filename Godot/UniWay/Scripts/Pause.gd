@@ -11,10 +11,11 @@ var isPaused = false setget set_is_paused
 func _unhandled_input(event):
 	if event.is_action_pressed("paused"):
 		#Condição que garante o aparecimento e desaparecimento do menu de pause
-		if (self.visible == false):
-			self.visible = true
-		else:
-			self.visible = false
+		if Global.verificadorGarantirPontos == false:
+			if (self.visible == false):
+				self.visible = true
+			else:
+				self.visible = false
 #Função que habilita o modo de pause, trabalhando junto com a de cima
 func set_is_paused(value):
 	isPaused = value
@@ -41,7 +42,7 @@ func _process(delta) ->void:
 	if Global.validadorDoTutorial == true:
 		self.isPaused = true
 	else:
-		if self.visible == true:
+		if self.visible == true or Global.verificadorGarantirPontos:
 			self.isPaused = true
 		else:
 			self.isPaused = false
@@ -64,6 +65,9 @@ func _process(delta) ->void:
 		$CenterContainer/VBoxContainer/Resumir.text = "Resumir"
 		$CenterContainer/VBoxContainer/Sair.text = "Salir"
 	
+#Garantir que o jogo não fique travado no modo pause
+func _exit_tree():
+	self.isPaused = false
 
 
 
