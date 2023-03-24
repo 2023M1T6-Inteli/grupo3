@@ -8,8 +8,10 @@ var pontos :String
 
 func _ready():
 	#Começa a tocar o som do motor do caminhão 
-	#$KinematicBody2D/musicaDeFundo.play()
 	Global.verificadorGarantirPontos = false
+	#if Global.verificadorGarantirPontos == false:
+		#$somDoMotor.play()
+	
 #Função que chama outras funções a cada frame do jogo
 func _process(delta):
 	placarPista()

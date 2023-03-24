@@ -26,7 +26,7 @@
 [ext_resource path="res://Assets novos/vida 1.png" type="Texture" id=24]
 [ext_resource path="res://Assets novos/vida 2.png" type="Texture" id=25]
 [ext_resource path="res://Assets novos/vida 4.png" type="Texture" id=26]
-[ext_resource path="res://Musicas/Motor do caminhão.wav" type="AudioStream" id=27]
+[ext_resource path="res://Musicas/somDoMotor.wav" type="AudioStream" id=27]
 [ext_resource path="res://Musicas/turbo_sound.mp3" type="AudioStream" id=28]
 [ext_resource path="res://Musicas/car_crash_glass.mp3" type="AudioStream" id=29]
 [ext_resource path="res://Assets novos/espaçoFeito.png" type="Texture" id=30]
@@ -565,6 +565,11 @@ margin_right = 7684.0
 margin_bottom = 4706.0
 mouse_filter = 2
 color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
+
+[node name="somDoMotor" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 1
+stream = ExtResource( 27 )
+volume_db = 10.0
 
 [connection signal="pressed" from="KinematicBody2D/Camera2D/garantirPontos" to="." method="_on_garantirPontos_pressed"]
 [connection signal="pressed" from="KinematicBody2D/Camera2D/garantirPontos/continuar" to="." method="_on_continuar_pressed"]

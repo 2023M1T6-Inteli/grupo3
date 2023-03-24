@@ -30,7 +30,7 @@ func idiomaModificador():
 		match Global.comoPerdeu:
 			0:
 				if valorAleatorio <= 49:
-					$RichTextLabel.text = "Pai, mãe e duas filhas morrem em acidente causado por " + nome + "."
+					$RichTextLabel.text = "Pai, sua esposa e duas filhas morrem em acidente causado por " + nome + "."
 				else:
 					$RichTextLabel.text = "Dois idosos e seus netos perdem a vida em um acidente causado por " + nome + "."
 			1:

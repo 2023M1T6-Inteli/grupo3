@@ -115,6 +115,12 @@ func _process(delta):
 		$gitHub.text = "quienes somos"
 		$LineEdit/Label.text = "introduzca su nombre"
 		$LineEdit/Label/continuar.text = "Continuar"
+		
+	if $LineEdit.text == "":
+		$LineEdit/Label/continuar.disabled = true
+	else:
+		$LineEdit/Label/continuar.disabled = false
+		
 
 #Botão que redireciona para a nossa pagina do GitHub
 func _on_gitHub_pressed():

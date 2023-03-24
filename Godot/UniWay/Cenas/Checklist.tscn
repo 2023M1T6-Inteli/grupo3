@@ -59,9 +59,9 @@ position = Vector2( 732, 910 )
 texture = ExtResource( 2 )
 
 [node name="Button1" type="Button" parent="."]
-margin_left = 809.0
-margin_top = 321.0
-margin_right = 1319.0
+margin_left = 786.0
+margin_top = 300.0
+margin_right = 1216.0
 margin_bottom = 396.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
@@ -71,11 +71,12 @@ custom_fonts/font = SubResource( 3 )
 enabled_focus_mode = 0
 text = "Arrumar Freios"
 flat = true
+align = 2
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 815.0
-margin_top = 481.0
-margin_right = 1301.0
+margin_left = 785.0
+margin_top = 467.0
+margin_right = 1224.0
 margin_bottom = 562.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
@@ -85,11 +86,12 @@ custom_fonts/font = SubResource( 4 )
 enabled_focus_mode = 0
 text = "Verificar  Motor"
 flat = true
+align = 2
 
 [node name="Button3" type="Button" parent="."]
-margin_left = 817.0
-margin_top = 638.0
-margin_right = 1299.0
+margin_left = 782.0
+margin_top = 625.0
+margin_right = 1198.0
 margin_bottom = 730.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
@@ -99,12 +101,13 @@ custom_fonts/font = SubResource( 4 )
 enabled_focus_mode = 0
 text = "Alinhar eixos"
 flat = true
+align = 2
 
 [node name="Button4" type="Button" parent="."]
-margin_left = 814.0
-margin_top = 809.0
-margin_right = 1307.0
-margin_bottom = 889.0
+margin_left = 781.0
+margin_top = 799.0
+margin_right = 1219.0
+margin_bottom = 899.0
 focus_mode = 0
 custom_colors/font_color_focus = Color( 0.341176, 1, 0.321569, 1 )
 custom_colors/font_color_hover = Color( 0.341176, 1, 0.321569, 1 )
@@ -113,6 +116,7 @@ custom_fonts/font = SubResource( 4 )
 enabled_focus_mode = 0
 text = "Calibrar Pneus"
 flat = true
+align = 2
 
 [node name="continuar" type="Button" parent="."]
 margin_left = 891.0
