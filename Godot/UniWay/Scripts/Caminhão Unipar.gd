@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-
+var validador = true
 #Criação de variáveis para armazenar valores da movimentação horizontal e 
 #vertical do caminhão
 var velocidadeHorizontal: Vector2
@@ -122,8 +122,13 @@ func atualizadorDeVida():
 		$barraDeVida/AnimatedSprite.frame = 2
 	elif Global.vidaDoCaminhao == 1.5:
 		$barraDeVida/AnimatedSprite.frame = 3
+		yield(get_tree().create_timer(0.5), "timeout")
+		if validador:
+			Global.verificadorGarantirPontos = true
+			validador = false
 	elif Global.vidaDoCaminhao == 0:
 		$barraDeVida/AnimatedSprite.frame = 4
+		Global.comoPerdeu = 1
 		get_tree().change_scene("res://Cenas/Jornal1.tscn")
 	
 #Essa função auxilia na mudança de vida devido um problema na sprite

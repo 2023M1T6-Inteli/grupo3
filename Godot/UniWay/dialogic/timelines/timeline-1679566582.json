@@ -1,0 +1,58 @@
+{
+	"events": [
+		{
+			"animation": "3-fade_in_up_big.gd",
+			"animation_length": 0,
+			"animation_wait": false,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Olá, sou a secretaria Helena e vou te instruir hoje."
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Antes de você seguir para sua jornada é importante conferir a sua check list, para confirmar se está tudo em ordem."
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Após isso pode prosseguir, mas é importante que saiba!"
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "durante sua jornada poderá escolher: continuar até onde quiser e ganhar mais pontos, arriscando perde-los se sofrer um acidente, ou assegura-los(barra de espaço), assim parando e salvando seus pontos no ranking."
+		},
+		{
+			"change_scene": "res://Cenas/Checklist.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1679566582.json",
+		"name": "salaDaSecretaria"
+	}
+}

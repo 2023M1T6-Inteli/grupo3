@@ -1,0 +1,57 @@
+{
+	"events": [
+		{
+			"animation": "3-fade_in_up_big.gd",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hola, soy la secretaria Helena y te voy a instruir hoy."
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Antes de emprender su viaje, es importante revisar su lista de verificación para confirmar que todo está en orden."
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Después de eso, puede continuar, ¡pero es importante que lo sepa!"
+		},
+		{
+			"character": "character-1679566213.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "durante tu recorrido podrás elegir: continuar hasta donde quieras y ganar más puntos, arriesgándote a perderlos si tienes un accidente, o asegurarlos (barra espaciadora), deteniéndote así y guardando tus puntos en el ranking."
+		},
+		{
+			"change_scene": "res://Cenas/Checklist.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1679579027.json",
+		"name": "salaDaSecretaria2"
+	}
+}

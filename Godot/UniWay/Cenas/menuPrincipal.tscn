@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Control.gd" type="Script" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Scripts/caminhãoTelaInicial.gd" type="Script" id=8]
 [ext_resource path="res://Assets novos/Novo titulo Uniway 2.png" type="Texture" id=9]
 [ext_resource path="res://Musicas/som resposta certa.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Highway Artwork/Layers/highway-sky.png" type="Texture" id=11]
+[ext_resource path="res://Assets novos/Fabrica.png" type="Texture" id=12]
 
 [sub_resource type="DynamicFontData" id=9]
 
@@ -139,27 +141,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
 
-[node name="Highway-sky" type="Sprite" parent="."]
+[node name="HighwaySky2" type="Sprite" parent="."]
+position = Vector2( -901, 540 )
+scale = Vector2( 4.8, 4.5 )
+texture = ExtResource( 11 )
+
+[node name="HighwaySky" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
 scale = Vector2( 4.8, 4.5 )
 texture = ExtResource( 7 )
 
-[node name="TituloDoJogo" type="Sprite" parent="Highway-sky"]
-position = Vector2( -4.7917, -55.7778 )
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 9 )
-
-[node name="Background-light" type="Sprite" parent="Highway-sky"]
-position = Vector2( -176.569, 37.8358 )
-scale = Vector2( 0.78, 0.616 )
-texture = ExtResource( 6 )
-
-[node name="Background-light2" type="Sprite" parent="Highway-sky"]
-position = Vector2( 160.051, 39.403 )
-scale = Vector2( 0.78, 0.616 )
-texture = ExtResource( 6 )
-
-[node name="Camera2D" type="Camera2D" parent="Highway-sky"]
+[node name="Fabrica" type="Sprite" parent="."]
+position = Vector2( -934, 564 )
+scale = Vector2( 1.33, 1.2 )
+texture = ExtResource( 12 )
 
 [node name="control" type="VBoxContainer" parent="."]
 anchor_left = 0.55
@@ -215,6 +210,31 @@ position = Vector2( 202, 934 )
 scale = Vector2( 3.16016, 2.90347 )
 texture = ExtResource( 3 )
 
+[node name="Estrada 7" type="Sprite" parent="."]
+position = Vector2( -202, 934 )
+scale = Vector2( 3.16016, 2.90347 )
+texture = ExtResource( 3 )
+
+[node name="Estrada 8" type="Sprite" parent="."]
+position = Vector2( -606, 934 )
+scale = Vector2( 3.16016, 2.90347 )
+texture = ExtResource( 3 )
+
+[node name="Estrada 9" type="Sprite" parent="."]
+position = Vector2( -1010, 934 )
+scale = Vector2( 3.16016, 2.90347 )
+texture = ExtResource( 3 )
+
+[node name="Estrada 10" type="Sprite" parent="."]
+position = Vector2( -1414, 934 )
+scale = Vector2( 3.16016, 2.90347 )
+texture = ExtResource( 3 )
+
+[node name="Estrada 11" type="Sprite" parent="."]
+position = Vector2( -1818, 934 )
+scale = Vector2( 3.16016, 2.90347 )
+texture = ExtResource( 3 )
+
 [node name="Estrada 3" type="Sprite" parent="."]
 position = Vector2( 606, 934 )
 scale = Vector2( 3.16016, 2.90347 )
@@ -234,21 +254,6 @@ texture = ExtResource( 3 )
 position = Vector2( 1818, 934 )
 scale = Vector2( 3.16016, 2.90347 )
 texture = ExtResource( 3 )
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-pause_mode = 2
-process_priority = 1
-script = ExtResource( 8 )
-
-[node name="caminhãoUnipar" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 1730, 570 )
-scale = Vector2( 10, 10 )
-texture = ExtResource( 4 )
-
-[node name="LogoDaUnipar" type="Sprite" parent="KinematicBody2D/caminhãoUnipar"]
-position = Vector2( -25, 19.6 )
-scale = Vector2( 0.103704, 0.08 )
-texture = ExtResource( 5 )
 
 [node name="VBoxIdioma" type="VBoxContainer" parent="."]
 visible = false
@@ -436,6 +441,50 @@ custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 26 )
 text = "voltar"
 flat = true
+
+[node name="TituloDoJogo" type="Sprite" parent="."]
+position = Vector2( 937, 289 )
+scale = Vector2( 1.92, 1.8 )
+texture = ExtResource( 9 )
+
+[node name="Background-light" type="Sprite" parent="."]
+position = Vector2( 112.469, 710.261 )
+scale = Vector2( 3.744, 2.772 )
+texture = ExtResource( 6 )
+
+[node name="Background-light4" type="Sprite" parent="."]
+position = Vector2( -1504, 713 )
+scale = Vector2( 3.744, 2.772 )
+texture = ExtResource( 6 )
+
+[node name="Background-light2" type="Sprite" parent="."]
+position = Vector2( 1728.24, 717.313 )
+scale = Vector2( 3.744, 2.772 )
+texture = ExtResource( 6 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+pause_mode = 2
+process_priority = 1
+script = ExtResource( 8 )
+
+[node name="caminhãoUnipar" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 1730, 570 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 4 )
+
+[node name="LogoDaUnipar" type="Sprite" parent="KinematicBody2D/caminhãoUnipar"]
+position = Vector2( -25, 19.6 )
+scale = Vector2( 0.103704, 0.08 )
+texture = ExtResource( 5 )
+
+[node name="Camera2D" type="Camera2D" parent="KinematicBody2D/caminhãoUnipar"]
+position = Vector2( -77, -3 )
+scale = Vector2( 0.48, 0.45 )
+current = true
+limit_left = -1860
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
 
 [connection signal="pressed" from="control/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="control/Idioma" to="." method="_on_Idioma_pressed"]

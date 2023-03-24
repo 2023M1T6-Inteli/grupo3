@@ -21,3 +21,8 @@ var vidaDoCaminhao :float
 var nomeDoJogador :String
 
 var verificadorGarantirPontos :bool
+
+var personagemSelecionado :int
+
+#se = 0 morreu para o carro da via contraria, se = 1 morreu para o buraco
+var comoPerdeu:int

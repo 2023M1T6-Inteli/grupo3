@@ -22,4 +22,5 @@ func movimentoCarrinho():
 
 #Função que faz a troca de cena se houver batida
 func _on_Area2D_body_entered(body):
+	Global.comoPerdeu = 0
 	get_tree().change_scene("res://Cenas/Jornal1.tscn")

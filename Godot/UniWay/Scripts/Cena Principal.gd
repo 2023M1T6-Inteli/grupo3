@@ -8,7 +8,7 @@ var pontos :String
 
 func _ready():
 	#Começa a tocar o som do motor do caminhão 
-	$KinematicBody2D/musicaDeFundo.play()
+	#$KinematicBody2D/musicaDeFundo.play()
 	Global.verificadorGarantirPontos = false
 #Função que chama outras funções a cada frame do jogo
 func _process(delta):

@@ -4,6 +4,7 @@ extends KinematicBody2D
 #validação da movimentação
 var movimentoHorizontal: Vector2
 var verificadorDeMovimento :bool
+var multiplicadorDeVelocidade :float
 
 #Armazeno o valor na validação de movimento como false para
 #o caminhão não ativar a movimentação no inicio da cena
@@ -15,10 +16,14 @@ func _ready():
 func _process(delta):
 	if verificadorDeMovimento == true:
 		movimentoHorizontal = move_and_slide(movimentoHorizontal)
-		movimentoHorizontal.x = -900
-		if $"caminhãoUnipar".global_position.x <= 0:
-			#Animação de transição
-			transitionScene.trocaDeCena()
-			#Troca de cena
-			get_tree().change_scene("res://Cenas/Checklist.tscn")
+		movimentoHorizontal.x = -900 * multiplicadorDeVelocidade
+	if $"caminhãoUnipar".global_position.x <= -650:
+		multiplicadorDeVelocidade = 0
+		#Animação de transição
+		yield(get_tree().create_timer(1.5), "timeout")
+		transitionScene.trocaDeCena()
+		#Troca de cena
+		get_tree().change_scene("res://Cenas/salaDaSecretaria.tscn")
+	else:
+		multiplicadorDeVelocidade = 1
 	

@@ -7,7 +7,7 @@ onready var caminhao = get_node("KinematicBody2D")
 #inserir o nome aparecer ao clickar no botão "START"
 func _on_StartButton_pressed():
 	$somCorreto.play()
-	$"Highway-sky/TituloDoJogo".visible = false
+	$TituloDoJogo.visible = false
 	$control.visible = false
 	$gitHub.visible = false
 	$Unipar.visible = false
@@ -17,7 +17,7 @@ func _on_StartButton_pressed():
 
 #Essa função abre o menu de seleção de idiomas
 func _on_Idioma_pressed(): 
-	$"Highway-sky/TituloDoJogo".visible = false
+	$TituloDoJogo.visible = false
 	$control.visible = false
 	$gitHub.visible = false
 	$Unipar.visible = false
@@ -34,7 +34,7 @@ func _on_Exit_pressed():
 
 #Função que muda o idioma para PT-BR
 func _on_PTBR_pressed():
-	$"Highway-sky/TituloDoJogo".visible = true
+	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
@@ -46,7 +46,7 @@ func _on_PTBR_pressed():
 	
 #Função que muda o idioma para inglês
 func _on_English_pressed():
-	$"Highway-sky/TituloDoJogo".visible = true
+	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
@@ -58,7 +58,7 @@ func _on_English_pressed():
 
 #Função que muda o idioma para espanhol
 func _on_Spanish_pressed():
-	$"Highway-sky/TituloDoJogo".visible = true
+	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
@@ -72,7 +72,7 @@ func _on_Spanish_pressed():
 
 #Função que sai do menu de seleção de idioma sem alterar o idioma
 func _on_VoltarIdioma_pressed():
-	$"Highway-sky/TituloDoJogo".visible = true
+	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
@@ -140,7 +140,7 @@ func _enter_tree():
 
 func _on_Top_5_pressed():
 	alteradorDeRanking()
-	$"Highway-sky/TituloDoJogo".visible = false
+	$TituloDoJogo.visible = false
 	$control.visible = false
 	$gitHub.visible = false
 	$Unipar.visible = false
@@ -175,7 +175,7 @@ func alteradorDeRanking():
 		$"Título Top 5/Top5".text = ""
 
 func _on_voltarRanking_pressed():
-	$"Highway-sky/TituloDoJogo".visible = true
+	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
 	$Unipar.visible = true
