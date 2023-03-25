@@ -1,6 +1,8 @@
 extends Node
 class_name DialogicParser
 
+#todo esse script faz parte do plugin Dialogic
+
 
 # adds name coloring to the dialog texts
 static func parse_characters(dialog_script):

@@ -32,8 +32,8 @@ func _on_Sair_pressed():
 	self.isPaused = false
 	get_tree().change_scene("res://Cenas/menuPrincipal.tscn")
 	
-#Função que armazena valores verdadeiro ou falso de acordo
-#com a visibilidade do menu de pause
+#Função ultilizada para não deixar um menu sobrepor o outro
+#e pausar o jogo
 func _process(delta) ->void:
 	if(self.visible == true):
 		Global.verificadorDePause = true

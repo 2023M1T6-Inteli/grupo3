@@ -116,6 +116,8 @@ func _process(delta):
 		$LineEdit/Label.text = "introduzca su nombre"
 		$LineEdit/Label/continuar.text = "Continuar"
 		
+	#condição que torna obrigatório escrever alguma coisa na parte do
+	#nome do jogador 
 	if $LineEdit.text == "":
 		$LineEdit/Label/continuar.disabled = true
 	else:
@@ -143,7 +145,7 @@ func _on_continuar_pressed():
 func _enter_tree():
 	DataSave.loadData()
 
-
+#botão que faz aparecer o ranking do jogo
 func _on_Top_5_pressed():
 	alteradorDeRanking()
 	$TituloDoJogo.visible = false
@@ -180,6 +182,7 @@ func alteradorDeRanking():
 	else:
 		$"Título Top 5/Top5".text = ""
 
+#botão que sai do ranking do jogo voltando para a tela inicial
 func _on_voltarRanking_pressed():
 	$TituloDoJogo.visible = true
 	$control.visible = true

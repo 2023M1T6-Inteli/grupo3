@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-
+#variavél ultilizada para bloquear a repetição de uma condição chamada na
+#função process
 var validador = true
 #Criação de variáveis para armazenar valores da movimentação horizontal e 
 #vertical do caminhão
@@ -98,6 +99,8 @@ func alteradorDeVelocidade():
 		multiplicadordeVelocidadeHorizontal =420
 		$velocimetro/AnimatedSprite.frame = 4
 
+#Essa função faz com que o som do barulho do turbo toque quando o caminhão aumenta
+#a velocidade
 func funcionamentoDoTurbo():
 	if Global.pontosArmazenados == 2000:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
@@ -123,6 +126,8 @@ func atualizadorDeVida():
 	elif Global.vidaDoCaminhao == 1.5:
 		$barraDeVida/AnimatedSprite.frame = 3
 		yield(get_tree().create_timer(0.5), "timeout")
+		#condição que faz com que apareça a possibilidade de garantir os pontos de 
+		#forma automatica 
 		if validador:
 			Global.verificadorGarantirPontos = true
 			validador = false

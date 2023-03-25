@@ -9,13 +9,14 @@ var pontos :String
 func _ready():
 	#Começa a tocar o som do motor do caminhão 
 	Global.verificadorGarantirPontos = false
+	#condição que faz tocar o som do motor do carro
 	#if Global.verificadorGarantirPontos == false:
 		#$somDoMotor.play()
 	
 #Função que chama outras funções a cada frame do jogo
 func _process(delta):
 	placarPista()
-	pauseMaskControlador()
+	controladorDaMascaraDePause()
 	idiomaModificador()
 	
 	
@@ -30,7 +31,7 @@ func placarPista():
 	Global.pontosArmazenados = quantidadesDePontos
 	
 #Função que habilita e desabilita a cor para o menu de pause e para o tutorial
-func pauseMaskControlador() ->void:
+func controladorDaMascaraDePause() ->void:
 	if(Global.verificadorDePause == true):
 		$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = true
 		$buraco/Area2D3/CollisionShape2D/Buraco/pauseMask2.visible = true
@@ -81,6 +82,7 @@ func idiomaModificador():
 		$KinematicBody2D/Camera2D/garantirPontos.text  = "puntos seguros"
 		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "volver"
 		
+#função que faz o menu de garantir os pontos aparecer
 func _unhandled_input(event):
 	if Global.validadorDoTutorial == false:
 		if event.is_action_pressed("garantirPontos"):
@@ -90,7 +92,8 @@ func _unhandled_input(event):
 				else:
 					Global.verificadorGarantirPontos = false
 	
-
+#função que faz o jogo continuar quando se aperta o botão continuar dentro do
+#menu de garantir os pontos
 func _on_continuar_pressed():
 	Global.verificadorGarantirPontos = false
 	$carrinho/Area2D3/CollisionShape2D/Sprite/pauseMask.visible = false
@@ -98,6 +101,6 @@ func _on_continuar_pressed():
 	$ParallaxBackground/pauseMask2.visible = false
 	$KinematicBody2D/Camera2D/garantirPontos.visible = false
 
-
+#função que faz o jogador ir até a cena final com os pontos garantidos
 func _on_garantirPontos_pressed():
 	get_tree().change_scene("res://Cenas/gameOver.tscn")

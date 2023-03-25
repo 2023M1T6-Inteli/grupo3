@@ -2,8 +2,9 @@ extends Control
 
 #Termo que permite acessar variáveis de outros scripts
 onready var relogio = get_node("Relogio")
-
+#variável ultilicada para alterar o nome do jogador no jornal
 var nome = ""
+#variável que tem valor aleatório para que o texto do jornal fique aleatório
 var valorAleatorio = rand_range(0,78)
 func _ready():
 	Global.pontosArmazenados = 0
@@ -15,7 +16,7 @@ func _process(delta):
 		nome = "caminhoneira"
 	else:
 		nome = "caminhoneiro"
-	
+	#chamando outras funções
 	idiomaModificador()
 	alteradorDeJornal()
 	
@@ -57,7 +58,7 @@ func idiomaModificador():
 			1:
 				$RichTextLabel.text = "Conductor de camión se quedó dormido al volante y tuvo un accidente provocado por un bache en la carretera."
 	
-		
+#função que altera a imagem do jornal
 func alteradorDeJornal():
 	match Global.personagemSelecionado:
 		0:
