@@ -96,6 +96,7 @@ position = Vector2( -3, 0 )
 script = ExtResource( 5 )
 
 [node name="coluna1Direita" type="KinematicBody2D" parent="."]
+pause_mode = 1
 script = ExtResource( 32 )
 
 [node name="arvore" type="Sprite" parent="coluna1Direita"]
