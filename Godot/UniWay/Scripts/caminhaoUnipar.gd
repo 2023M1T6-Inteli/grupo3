@@ -21,6 +21,7 @@ func _ready():
 
 #Função de física padrão do Godot para chamar funções de movimento
 func _physics_process(delta):
+	funcionamentoDoTurbo()
 	#Equação que armazena a posição do caminhão em uma variavél global
 	Global.posicionamentoDoJogador = $"CollisionShape2D/CaminhãoUnipar".global_position.y;
 	limiteHorizontal()
@@ -34,7 +35,6 @@ func _physics_process(delta):
 	#Chama funções que vão modificar a vida
 	atualizadorDeVida()
 	ajustadorDaVida()
-	funcionamentoDoTurbo()
 	
 	
 
@@ -106,9 +106,9 @@ func funcionamentoDoTurbo():
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
 	elif Global.pontosArmazenados == 5000:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
-	elif Global.pontosArmazenados == 9000:
+	elif Global.pontosArmazenados >= 9000 and Global.pontosArmazenados <= 9050:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
-	elif Global.pontosArmazenados == 14000:
+	elif Global.pontosArmazenados >= 14000 and Global.pontosArmazenados <= 14050:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
 	
 		

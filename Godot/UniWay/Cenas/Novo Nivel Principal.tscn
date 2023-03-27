@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Assets novos/Design sem nome (9).png" type="Texture" id=1]
 [ext_resource path="res://Assets novos/Terreno .png" type="Texture" id=2]
@@ -30,6 +30,8 @@
 [ext_resource path="res://Musicas/turbo_sound.mp3" type="AudioStream" id=28]
 [ext_resource path="res://Musicas/car_crash_glass.mp3" type="AudioStream" id=29]
 [ext_resource path="res://Assets novos/espaçoFeito.png" type="Texture" id=30]
+[ext_resource path="res://Assets novos/tree.png" type="Texture" id=31]
+[ext_resource path="res://Scripts/coluna1Direita.gd" type="Script" id=32]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 64 )
@@ -91,6 +93,25 @@ radius = 28.0
 pause_mode = 2
 position = Vector2( -3, 0 )
 script = ExtResource( 5 )
+
+[node name="coluna1" type="Sprite" parent="."]
+script = ExtResource( 32 )
+
+[node name="arvore" type="Sprite" parent="coluna1"]
+position = Vector2( 1374, 134 )
+texture = ExtResource( 31 )
+
+[node name="arvore2" type="Sprite" parent="coluna1"]
+position = Vector2( 1374, -268 )
+texture = ExtResource( 31 )
+
+[node name="arvore3" type="Sprite" parent="coluna1"]
+position = Vector2( 1374, 503 )
+texture = ExtResource( 31 )
+
+[node name="arvore4" type="Sprite" parent="coluna1"]
+position = Vector2( 1374, -700 )
+texture = ExtResource( 31 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -354,6 +375,7 @@ anchor_bottom = 0.0
 margin_right = 40.0
 
 [node name="Label" type="Label" parent="KinematicBody2D/Camera2D"]
+visible = false
 margin_left = -939.0
 margin_top = -1024.0
 margin_right = 935.0
@@ -570,6 +592,8 @@ color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
 pause_mode = 1
 stream = ExtResource( 27 )
 volume_db = 10.0
+
+[node name="coluna2" type="Sprite" parent="."]
 
 [connection signal="pressed" from="KinematicBody2D/Camera2D/garantirPontos" to="." method="_on_garantirPontos_pressed"]
 [connection signal="pressed" from="KinematicBody2D/Camera2D/garantirPontos/continuar" to="." method="_on_continuar_pressed"]
