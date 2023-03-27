@@ -21,6 +21,7 @@ func _ready():
 
 #Função de física padrão do Godot para chamar funções de movimento
 func _physics_process(delta):
+	funcionamentoDoTurbo()
 	#Equação que armazena a posição do caminhão em uma variavél global
 	Global.posicionamentoDoJogador = $"CollisionShape2D/CaminhãoUnipar".global_position.y;
 	limiteHorizontal()
@@ -34,7 +35,6 @@ func _physics_process(delta):
 	#Chama funções que vão modificar a vida
 	atualizadorDeVida()
 	ajustadorDaVida()
-	funcionamentoDoTurbo()
 	
 	
 
@@ -77,14 +77,14 @@ func limiteHorizontal() ->void:
 	
 #Essa função aumenta a velocidade do caminhão em condição do aumento de pontos
 func alteradorDeVelocidade():
-	if Global.pontosArmazenados <=2000:
+	if Global.pontosArmazenados <=1000:
 		multiplicadordeVelocidadeHorizontal = 270
 		multiplicadordeVelocidadeVertical = 500
 		$velocimetro/AnimatedSprite.frame = 0
-	elif Global.pontosArmazenados >= 2000 and Global.pontosArmazenados <= 5000:
+	elif Global.pontosArmazenados >= 1000 and Global.pontosArmazenados <= 4000:
 		multiplicadordeVelocidadeVertical = 750
 		$velocimetro/AnimatedSprite.frame = 1
-	elif Global.pontosArmazenados >= 5000 and Global.pontosArmazenados <= 9000:
+	elif Global.pontosArmazenados >= 4000 and Global.pontosArmazenados <= 9000:
 		multiplicadordeVelocidadeVertical = 1000
 		multiplicadordeVelocidadeHorizontal = 320
 		$velocimetro/AnimatedSprite.frame = 2
@@ -102,13 +102,13 @@ func alteradorDeVelocidade():
 #Essa função faz com que o som do barulho do turbo toque quando o caminhão aumenta
 #a velocidade
 func funcionamentoDoTurbo():
-	if Global.pontosArmazenados == 2000:
+	if Global.pontosArmazenados == 1000:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
-	elif Global.pontosArmazenados == 5000:
+	elif Global.pontosArmazenados == 4000:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
-	elif Global.pontosArmazenados == 9000:
+	elif Global.pontosArmazenados >= 9000 and Global.pontosArmazenados <= 9020:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
-	elif Global.pontosArmazenados == 14000:
+	elif Global.pontosArmazenados >= 14000 and Global.pontosArmazenados <= 14050:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
 	
 		
