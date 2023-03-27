@@ -106,7 +106,7 @@ func funcionamentoDoTurbo():
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
 	elif Global.pontosArmazenados == 5000:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
-	elif Global.pontosArmazenados >= 9000 and Global.pontosArmazenados <= 9050:
+	elif Global.pontosArmazenados >= 9000 and Global.pontosArmazenados <= 9020:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
 	elif Global.pontosArmazenados >= 14000 and Global.pontosArmazenados <= 14050:
 		$"CollisionShape2D/CaminhãoUnipar/turboFlutter".play()
