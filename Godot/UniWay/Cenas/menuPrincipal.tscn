@@ -313,26 +313,26 @@ text = "Voltar"
 flat = true
 
 [node name="gitHub" type="Button" parent="."]
-margin_left = 6.0
-margin_top = 1.0
-margin_right = 452.0
-margin_bottom = 83.0
+margin_left = 26.0
+margin_top = 21.0
+margin_right = 472.0
+margin_bottom = 103.0
 custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
 custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 18 )
-text = "Quem Somos"
+text = "Quem somos"
 flat = true
 align = 0
 
 [node name="Unipar" type="Button" parent="."]
-margin_left = 8.0
-margin_top = 88.0
-margin_right = 291.0
-margin_bottom = 170.0
+margin_left = 1299.0
+margin_top = 34.0
+margin_right = 1913.0
+margin_bottom = 116.0
 custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
 custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 19 )
-text = "Unipar"
+text = "unidade Unipar"
 flat = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
@@ -373,10 +373,10 @@ flat = true
 stream = ExtResource( 10 )
 
 [node name="Top 5" type="Button" parent="."]
-margin_left = 1701.0
-margin_top = 5.0
-margin_right = 1913.0
-margin_bottom = 87.0
+margin_left = 33.0
+margin_top = 126.0
+margin_right = 245.0
+margin_bottom = 208.0
 custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
 custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 23 )

@@ -25,25 +25,25 @@
 			"character": "character-1679566213.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Olá, sou a secretaria Helena e vou te instruir hoje."
+			"text": "Olá, sou a secretária Helena e vou te instruir hoje."
 		},
 		{
 			"character": "character-1679566213.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Antes de você seguir para sua jornada é importante conferir a sua check list, para confirmar se está tudo em ordem."
+			"text": "Antes de você seguir para sua jornada é importante conferir a sua checklist, para confirmar se está tudo em ordem."
 		},
 		{
 			"character": "character-1679566213.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Após isso pode prosseguir, mas é importante que saiba!"
+			"text": "Após isso pode prosseguir, mas é importante que ... saiba!"
 		},
 		{
 			"character": "character-1679566213.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "durante sua jornada poderá escolher: continuar até onde quiser e ganhar mais pontos, arriscando perde-los se sofrer um acidente, ou assegura-los(barra de espaço), assim parando e salvando seus pontos no ranking."
+			"text": "ao longo de sua jornada poderá escolher: continuar até onde quiser e ganhar mais pontos, arriscando perde-los se sofrer um acidente, ou assegura-los(barra de espaço), assim parando e salvando seus pontos no ranking."
 		},
 		{
 			"change_scene": "res://Cenas/Checklist.tscn",

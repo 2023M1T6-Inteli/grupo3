@@ -68,4 +68,3 @@ func alteradorDeJornal():
 		2:
 			$Jornal2.visible = true
 
-		
