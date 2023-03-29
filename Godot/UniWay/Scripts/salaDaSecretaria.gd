@@ -78,7 +78,7 @@ func _on_Caminhoneira_pressed():
 	Global.personagemSelecionado = 2
 	yield(get_tree().create_timer(1), "timeout")
 	alteradorDeIdioma()
-
+	
 #função que faz a mudança de idioma no dialogo com a secretaria de acordo
 #com o idioma escolhido
 func alteradorDeIdioma():
@@ -94,4 +94,3 @@ func alteradorDeIdioma():
 	if Global.idiomaEscolhido == 2:
 		var dialogo2 = Dialogic.start("salaDaSecretaria2")
 		add_child(dialogo2)
-	

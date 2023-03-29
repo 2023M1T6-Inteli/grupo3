@@ -23,7 +23,7 @@ func _process(delta):
 		yield(get_tree().create_timer(1.5), "timeout")
 		transitionScene.trocaDeCena()
 		#Troca de cena
-		get_tree().change_scene("res://Cenas/salaDaSecretaria.tscn")
+		get_tree().change_scene("res://Cenas/salaSom.tscn")
 	else:
 		multiplicadorDeVelocidade = 1
 	

@@ -8,6 +8,9 @@ var nome = ""
 var valorAleatorio = rand_range(0,78)
 func _ready():
 	Global.pontosArmazenados = 0
+	$sirene.play()
+	yield(get_tree().create_timer(5),"timeout")
+	$sirene.stop()
 #Função que habilita a visualização do botão
 func _process(delta):
 	if relogio.validadorDoRelogio == true:

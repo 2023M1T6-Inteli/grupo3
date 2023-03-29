@@ -84,7 +84,7 @@ custom_fonts/font = SubResource( 1 )
 disabled = true
 flat = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="sirene" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -14.192
 autoplay = true

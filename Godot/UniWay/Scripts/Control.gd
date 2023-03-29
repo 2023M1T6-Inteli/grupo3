@@ -13,7 +13,6 @@ func _on_StartButton_pressed():
 	$Unipar.visible = false
 	$"Top 5".visible = false
 	$LineEdit.visible = true
-	
 
 #Essa função abre o menu de seleção de idiomas
 func _on_Idioma_pressed(): 

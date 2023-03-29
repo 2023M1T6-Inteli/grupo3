@@ -85,13 +85,13 @@ outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=18]
-size = 50
+size = 64
 outline_size = 4
 outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=19]
-size = 50
+size = 64
 outline_size = 4
 outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
 font_data = ExtResource( 1 )
@@ -113,7 +113,7 @@ outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=23]
-size = 55
+size = 64
 outline_size = 4
 outline_color = Color( 0.137255, 0.137255, 0.137255, 1 )
 font_data = ExtResource( 1 )
@@ -313,10 +313,10 @@ text = "Voltar"
 flat = true
 
 [node name="gitHub" type="Button" parent="."]
-margin_left = 7.0
-margin_top = 75.0
-margin_right = 360.0
-margin_bottom = 140.0
+margin_left = 26.0
+margin_top = 21.0
+margin_right = 472.0
+margin_bottom = 103.0
 custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
 custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 18 )
@@ -325,10 +325,10 @@ flat = true
 align = 0
 
 [node name="Unipar" type="Button" parent="."]
-margin_left = 5.0
-margin_top = 11.0
-margin_right = 489.0
-margin_bottom = 76.0
+margin_left = 1299.0
+margin_top = 34.0
+margin_right = 1913.0
+margin_bottom = 116.0
 custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
 custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 19 )
@@ -373,10 +373,10 @@ flat = true
 stream = ExtResource( 10 )
 
 [node name="Top 5" type="Button" parent="."]
-margin_left = 1732.0
-margin_top = 4.0
-margin_right = 1916.0
-margin_bottom = 75.0
+margin_left = 33.0
+margin_top = 126.0
+margin_right = 245.0
+margin_bottom = 208.0
 custom_colors/font_color = Color( 0.972549, 0.976471, 0.941176, 1 )
 custom_colors/font_color_hover = Color( 0.976471, 0.921569, 0.0745098, 1 )
 custom_fonts/font = SubResource( 23 )
