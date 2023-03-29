@@ -502,9 +502,10 @@ scale = Vector2( 4, 4 )
 frames = SubResource( 7 )
 animation = "Velocímetro"
 
-[node name="musicaDeFundo" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
+[node name="somDoMotor" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
 position = Vector2( 1127, 543 )
 stream = ExtResource( 27 )
+volume_db = 10.0
 
 [node name="carrinho" type="KinematicBody2D" parent="."]
 pause_mode = 1
@@ -612,11 +613,6 @@ margin_right = 7684.0
 margin_bottom = 4706.0
 mouse_filter = 2
 color = Color( 0.156863, 0.156863, 0.156863, 0.784314 )
-
-[node name="somDoMotor" type="AudioStreamPlayer2D" parent="."]
-pause_mode = 1
-stream = ExtResource( 27 )
-volume_db = 10.0
 
 [node name="coluna1esquerda" type="KinematicBody2D" parent="."]
 show_behind_parent = true

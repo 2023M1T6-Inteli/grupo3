@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Checklist.png-2e0fc423db1d266e5c1b8a5341331e2e.stex"
+path="res://.import/checklist.png-5dceea0954fc958f05c6f768463aa013.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets novos/Checklist.png"
-dest_files=[ "res://.import/Checklist.png-2e0fc423db1d266e5c1b8a5341331e2e.stex" ]
+source_file="res://Assets novos/checklist.png"
+dest_files=[ "res://.import/checklist.png-5dceea0954fc958f05c6f768463aa013.stex" ]
 
 [params]
 
