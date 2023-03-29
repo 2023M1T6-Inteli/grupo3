@@ -33,8 +33,8 @@
 [ext_resource path="res://Assets novos/tree.png" type="Texture" id=31]
 [ext_resource path="res://Scripts/coluna1Direita.gd" type="Script" id=32]
 [ext_resource path="res://Scripts/coluna2Direita.gd" type="Script" id=33]
-[ext_resource path="res://Cenas/coluna1esquerda.gd" type="Script" id=34]
-[ext_resource path="res://Cenas/coluna1esquerda2.gd" type="Script" id=35]
+[ext_resource path="res://Scripts/coluna1esquerda.gd" type="Script" id=34]
+[ext_resource path="res://Scripts/coluna1esquerda2.gd" type="Script" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 64 )

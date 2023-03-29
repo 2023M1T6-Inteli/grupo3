@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Cenas/seleção musical.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/seleção musical.gd" type="Script" id=2]
 [ext_resource path="res://Assets novos/secretariaSentada.png" type="Texture" id=3]
 [ext_resource path="res://Assets novos/guitarra 2.png" type="Texture" id=4]
 [ext_resource path="res://Assets novos/circle blur more.png" type="Texture" id=5]
