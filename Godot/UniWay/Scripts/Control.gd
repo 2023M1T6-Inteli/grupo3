@@ -15,7 +15,8 @@ func _on_StartButton_pressed():
 	$LineEdit.visible = true
 
 #Essa função abre o menu de seleção de idiomas
-func _on_Idioma_pressed(): 
+func _on_Idioma_pressed():
+	$somCorreto.play() 
 	$TituloDoJogo.visible = false
 	$control.visible = false
 	$gitHub.visible = false
@@ -33,6 +34,7 @@ func _on_Exit_pressed():
 
 #Função que muda o idioma para PT-BR
 func _on_PTBR_pressed():
+	$somCorreto.play()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
@@ -45,6 +47,7 @@ func _on_PTBR_pressed():
 	
 #Função que muda o idioma para inglês
 func _on_English_pressed():
+	$somCorreto.play()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
@@ -57,6 +60,7 @@ func _on_English_pressed():
 
 #Função que muda o idioma para espanhol
 func _on_Spanish_pressed():
+	$somCorreto.play()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$gitHub.visible = true
@@ -143,6 +147,7 @@ func _on_continuar_pressed():
 #Toda vez que entrar nessa cena os dados salvos na maquina são carregados
 func _enter_tree():
 	DataSave.loadData()
+	musica()
 
 #botão que faz aparecer o ranking do jogo
 func _on_Top_5_pressed():
@@ -190,4 +195,8 @@ func _on_voltarRanking_pressed():
 	$"Top 5".visible = true
 	$"Título Top 5".visible = false
 	$voltarRanking.visible = false
+	
+func musica():
+	Sons.sertanejoPara()
+	Sons.rockPara()
 	

@@ -505,7 +505,7 @@ animation = "Velocímetro"
 [node name="somDoMotor" type="AudioStreamPlayer2D" parent="KinematicBody2D"]
 position = Vector2( 1127, 543 )
 stream = ExtResource( 27 )
-volume_db = 10.0
+volume_db = 17.0
 
 [node name="carrinho" type="KinematicBody2D" parent="."]
 pause_mode = 1

@@ -89,6 +89,7 @@ Global="*res://Scripts/Global.gd"
 transitionScene="*res://Cenas/cenaDeTransição.tscn"
 damageScene="*res://Cenas/cenaDeDano.tscn"
 DataSave="*res://Scripts/salvamentoDeDados.gd"
+Sons="*res://Cenas/sons.tscn"
 
 [display]
 

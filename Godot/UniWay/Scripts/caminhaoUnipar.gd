@@ -143,6 +143,5 @@ func ajustadorDaVida():
 		Global.vidaDoCaminhao += 0.5
 	if Global.vidaDoCaminhao == 0.5:
 		Global.vidaDoCaminhao = 0
-		
 
 	

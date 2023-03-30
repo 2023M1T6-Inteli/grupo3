@@ -11,6 +11,8 @@ func _ready():
 	$sirene.play()
 	yield(get_tree().create_timer(5),"timeout")
 	$sirene.stop()
+	musica()
+	
 #Função que habilita a visualização do botão
 func _process(delta):
 	if relogio.validadorDoRelogio == true:
@@ -70,4 +72,9 @@ func alteradorDeJornal():
 			$Jornal1.visible = true
 		2:
 			$Jornal2.visible = true
+			
+			
+func musica():
+	Sons.sertanejoPara()
+	Sons.rockPara()
 

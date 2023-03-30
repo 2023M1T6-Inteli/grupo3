@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/seleção musical.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Assets novos/circle blur more.png" type="Texture" id=5]
 [ext_resource path="res://Assets novos/SalaDaSecretaria.jpg" type="Texture" id=6]
 [ext_resource path="res://Assets novos/violão 2.png" type="Texture" id=7]
+[ext_resource path="res://Musicas/Nananananana_Nao_mp3/Nananananana Nao.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Musicas/rock.mp3" type="AudioStream" id=9]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -84,6 +86,9 @@ scale = Vector2( 3, 4.528 )
 texture = ExtResource( 5 )
 offset = Vector2( -167.089, -45.5171 )
 
+[node name="Rock1" type="AudioStreamPlayer" parent="rock"]
+stream = ExtResource( 9 )
+
 [node name="sertanejo" type="TextureButton" parent="."]
 light_mask = 0
 margin_left = 1322.0
@@ -97,6 +102,9 @@ expand = true
 position = Vector2( 142, 397 )
 scale = Vector2( 3, 4.59 )
 texture = ExtResource( 5 )
+
+[node name="Sertanejo1" type="AudioStreamPlayer" parent="sertanejo"]
+stream = ExtResource( 8 )
 
 [node name="guitarra" type="Sprite" parent="."]
 visible = false

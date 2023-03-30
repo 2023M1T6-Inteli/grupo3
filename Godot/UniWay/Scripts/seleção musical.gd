@@ -25,14 +25,7 @@ func _on_rock_mouse_exited():
 	
 #função que continua o jogo de acordo com o personagem escolhido
 func _on_rock_pressed():
-	$rock.visible = false
-	$sertanejo.visible = false
-	$selecionarSom.visible = false
-	$rockzada.visible = true
-	$SecretariaSentada.visible = true
-	$rockzada.visible = false
-	$sertanejozinho.visible = false
-	Global.personagemSelecionado = 0
+	Sons.rockInicia()
 	get_tree().change_scene("res://Cenas/salaDaSecretaria.tscn")
 
 
@@ -46,12 +39,6 @@ func _on_sertanejo_mouse_exited():
 
 #função que continua o jogo de acordo com o personagem escolhido
 func _on_sertanejo_pressed():
-	$rock.visible = false
-	$sertanejo.visible = false
-	$selecionarSom.visible = false
-	$sertanejozinho.visible = true
-	$SecretariaSentada.visible = true
-	$rockzada.visible = false
-	$sertanejozinho.visible = false
-	Global.personagemSelecionado = 1
+	# Carrega o arquivo de áudio
+	Sons.sertanejoInicia()
 	get_tree().change_scene("res://Cenas/salaDaSecretaria.tscn")
