@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Assets novos/Design sem nome (9).png" type="Texture" id=1]
 [ext_resource path="res://Assets novos/Terreno .png" type="Texture" id=2]
@@ -35,6 +35,8 @@
 [ext_resource path="res://Scripts/coluna2Direita.gd" type="Script" id=33]
 [ext_resource path="res://Scripts/coluna1esquerda.gd" type="Script" id=34]
 [ext_resource path="res://Scripts/coluna1esquerda2.gd" type="Script" id=35]
+[ext_resource path="res://Assets novos/pixil-frame-0 (14).png" type="Texture" id=36]
+[ext_resource path="res://Cenas/coluna3Direita.gd" type="Script" id=37]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 64 )
@@ -653,6 +655,54 @@ texture = ExtResource( 31 )
 [node name="arvore4" type="Sprite" parent="coluna1esquerda2"]
 position = Vector2( 139, -293 )
 texture = ExtResource( 31 )
+
+[node name="coluna3Esquerda" type="KinematicBody2D" parent="."]
+z_index = -10
+script = ExtResource( 37 )
+
+[node name="pedra" type="Sprite" parent="coluna3Esquerda"]
+position = Vector2( 1500, 327 )
+scale = Vector2( 2.375, 2.28125 )
+texture = ExtResource( 36 )
+
+[node name="pedra2" type="Sprite" parent="coluna3Esquerda"]
+position = Vector2( 1774, -38 )
+scale = Vector2( 2.8125, 2.48438 )
+texture = ExtResource( 36 )
+
+[node name="pedra3" type="Sprite" parent="coluna3Esquerda"]
+position = Vector2( 1506, -305 )
+scale = Vector2( 2.65625, 2.29688 )
+texture = ExtResource( 36 )
+
+[node name="pedra4" type="Sprite" parent="coluna3Esquerda"]
+position = Vector2( 1658, -678 )
+scale = Vector2( 2.5625, 2.5 )
+texture = ExtResource( 36 )
+
+[node name="coluna3Direita2" type="KinematicBody2D" parent="."]
+z_index = -10
+script = ExtResource( 37 )
+
+[node name="pedra" type="Sprite" parent="coluna3Direita2"]
+position = Vector2( 228, 262 )
+scale = Vector2( 2.375, 2.28125 )
+texture = ExtResource( 36 )
+
+[node name="pedra2" type="Sprite" parent="coluna3Direita2"]
+position = Vector2( 442, -98 )
+scale = Vector2( 2.8125, 2.48438 )
+texture = ExtResource( 36 )
+
+[node name="pedra3" type="Sprite" parent="coluna3Direita2"]
+position = Vector2( 226, -416 )
+scale = Vector2( 2.65625, 2.29688 )
+texture = ExtResource( 36 )
+
+[node name="pedra4" type="Sprite" parent="coluna3Direita2"]
+position = Vector2( 356, -663 )
+scale = Vector2( 2.5625, 2.5 )
+texture = ExtResource( 36 )
 
 [connection signal="pressed" from="KinematicBody2D/Camera2D/garantirPontos" to="." method="_on_garantirPontos_pressed"]
 [connection signal="pressed" from="KinematicBody2D/Camera2D/garantirPontos/continuar" to="." method="_on_continuar_pressed"]
