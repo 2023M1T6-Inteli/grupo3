@@ -26,6 +26,8 @@ func _process(delta):
 	alteradorDeIdioma()
 	if($"Check(Checklist)1".visible == true && $"Check(Checklist)2".visible == true && $"Check(Checklist)3".visible == true && $"Check(Checklist)4".visible == true):
 		$continuar.disabled = false
+	alteradorDePersonagem()
+	
 	
 #Essa função altera as palavras de acordo com o idioma escolhido 
 func alteradorDeIdioma():
@@ -59,4 +61,15 @@ func _on_continuar_pressed():
 	transitionScene.trocaDeCena()
 	confirmaContinuar = true
 	get_tree().change_scene("res://Cenas/Novo Nivel Principal.tscn")
+	
+func alteradorDePersonagem():
+	match Global.personagemSelecionado:
+		0:
+			$caminhoneiro1Selecionado.visible = true
+		1:
+			$caminhoneiro2Selecionado.visible = true
+		2:
+			$caminhoneiraSelecionada.visible = true
+		3: 
+			$Caminhoneira2Selecionado.visible = true
 	

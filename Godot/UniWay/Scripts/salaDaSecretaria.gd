@@ -101,7 +101,7 @@ func _on_Caminhoneira2_pressed():
 	$selecionarPersonagem.visible = false
 	$Caminhoneira2Selecionado.visible = true
 	$SecretariaSentada.visible = true
-	Global.personagemSelecionado = 0
+	Global.personagemSelecionado = 3
 	yield(get_tree().create_timer(1), "timeout")
 	alteradorDeIdioma()
 	
