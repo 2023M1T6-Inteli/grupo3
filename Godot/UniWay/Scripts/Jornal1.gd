@@ -17,7 +17,7 @@ func _ready():
 func _process(delta):
 	if relogio.validadorDoRelogio == true:
 		$voltarParaOMenu.disabled = false
-	if Global.personagemSelecionado == 2:
+	if Global.personagemSelecionado == 2 or 3:
 		nome = "caminhoneira"
 	else:
 		nome = "caminhoneiro"
@@ -72,8 +72,9 @@ func alteradorDeJornal():
 			$Jornal1.visible = true
 		2:
 			$Jornal2.visible = true
-			
-			
+		3:
+			$Jornal3.visible = true
+		
 func musica():
 	Sons.sertanejoPara()
 	Sons.rockPara()

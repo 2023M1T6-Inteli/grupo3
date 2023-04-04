@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Caminhoneira2.png-97e534e6f74145b7cfc7a80c24c9c414.stex"
+path="res://.import/Caminhoneira2.png-db0702c4273768cdba09c9b15744fb10.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets novos/Caminhoneira2.png"
-dest_files=[ "res://.import/Caminhoneira2.png-97e534e6f74145b7cfc7a80c24c9c414.stex" ]
+source_file="res://Caminhoneira2.png"
+dest_files=[ "res://.import/Caminhoneira2.png-db0702c4273768cdba09c9b15744fb10.stex" ]
 
 [params]
 

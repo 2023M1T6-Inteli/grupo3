@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Caminhoneira2.png-97e534e6f74145b7cfc7a80c24c9c414.stex"
+path="res://.import/jornal4.jpg-06b7472344864827468cc95cc8067dc4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets novos/Caminhoneira2.png"
-dest_files=[ "res://.import/Caminhoneira2.png-97e534e6f74145b7cfc7a80c24c9c414.stex" ]
+source_file="res://Assets novos/Jornais/jornal4.jpg"
+dest_files=[ "res://.import/jornal4.jpg-06b7472344864827468cc95cc8067dc4.stex" ]
 
 [params]
 
