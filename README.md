@@ -21,7 +21,7 @@
 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
+📜 O projeto foi desenvolvido pelo grupo B3t33r no módulo 1 da Inteli (Instituto de Tecnologia e Liderança). Esse projeto tem como objetivos, conscientizar os motoristas e operadores de carga da empresa parceira Unipar.
 <br><br>
 Meu projeto é um exemplo de como utilizar o github.
 <br><br>
@@ -31,9 +31,7 @@ Meu projeto é um exemplo de como utilizar o github.
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
+
 <br><br>
 May the force be with you!
 <br><br>
