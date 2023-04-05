@@ -2,10 +2,13 @@ extends Control
 
 #função que faz com que o efeito de luz inicie apagado ao entrar na cena
 func _enter_tree():
+	Global.personagemSelecionado = 4
 	$caminhoneiro1/Light2D.visible = false
 	$caminhoneiro2/Light2D.visible = false
 	$Caminhoneira/Light2D.visible = false
 	$Caminhoneira2/Light2D.visible = false
+	$Light2D.visible = false
+	Global.volume = true
 
 #função que altera os textos de acordo com o idioma escolhido
 func _process(delta):
@@ -15,6 +18,7 @@ func _process(delta):
 		$selecionarPersonagem.text = "select a character"
 	elif Global.idiomaEscolhido == 2:
 		$selecionarPersonagem.text = "selecciona un personaje"
+	volumeIcone()
 	
 
 #função que faz o efeito de luz aparecer 
@@ -120,3 +124,42 @@ func alteradorDeIdioma():
 	if Global.idiomaEscolhido == 2:
 		var dialogo2 = Dialogic.start("salaDaSecretaria2")
 		add_child(dialogo2)
+
+#Controla o volume do jogo, sendo ele mudo ou não
+func _on_volumeAtivo_pressed():
+	Sons.mudo()
+	Global.volume = false
+
+func _on_volumeMudo_pressed():
+	Sons.audivel()
+	Global.volume = true
+
+#controla o icone do volume
+func volumeIcone():
+	if Global.volume:
+		$volumeAtivo.rect_global_position.y = 28
+		$volumeMudo.rect_global_position.y = 100000
+	else:
+		$volumeAtivo.rect_global_position.y = 100000
+		$volumeMudo.rect_global_position.y = 18
+
+
+#controlar a luz de fundo do volume
+func _on_volumeAtivo_mouse_entered():
+	if Global.personagemSelecionado == 4:
+		$Light2D.visible = true
+
+
+func _on_volumeAtivo_mouse_exited():
+	if Global.personagemSelecionado == 4:
+		$Light2D.visible = false
+
+
+func _on_volumeMudo_mouse_entered():
+	if Global.personagemSelecionado == 4:
+		$Light2D.visible = true
+
+
+func _on_volumeMudo_mouse_exited():
+	if Global.personagemSelecionado == 4:
+		$Light2D.visible = false

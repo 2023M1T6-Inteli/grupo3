@@ -17,7 +17,7 @@ func _ready():
 func _process(delta):
 	if relogio.validadorDoRelogio == true:
 		$voltarParaOMenu.disabled = false
-	if Global.personagemSelecionado == 2 or 3:
+	if Global.personagemSelecionado == 2 or Global.personagemSelecionado == 3:
 		nome = "caminhoneira"
 	else:
 		nome = "caminhoneiro"

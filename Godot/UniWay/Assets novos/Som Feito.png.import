@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checklist.png-5dceea0954fc958f05c6f768463aa013.stex"
+path="res://.import/Som Feito.png-05a60dd1424a478d9be0e2229a88a516.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets novos/checklist.png"
-dest_files=[ "res://.import/checklist.png-5dceea0954fc958f05c6f768463aa013.stex" ]
+source_file="res://Assets novos/Som Feito.png"
+dest_files=[ "res://.import/Som Feito.png-05a60dd1424a478d9be0e2229a88a516.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

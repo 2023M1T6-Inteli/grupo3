@@ -63,6 +63,7 @@ scale = Vector2( 1.18209, 1.29149 )
 texture = ExtResource( 1 )
 
 [node name="Jornal3" type="Sprite" parent="."]
+visible = false
 position = Vector2( 993, 550 )
 scale = Vector2( 1.20144, 1.31643 )
 texture = ExtResource( 9 )

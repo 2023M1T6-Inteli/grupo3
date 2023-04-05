@@ -3,7 +3,6 @@ extends KinematicBody2D
 var movimento = Vector2()
 func _process(delta):
 	teletransporte()
-	movimentacao()
 
 func teletransporte():
 	if $arvore.global_position.y >= Global.posicionamentoDoJogador + 400:
@@ -35,7 +34,3 @@ func teletransporte():
 				$arvore4.visible = false
 			else:
 				$arvore4.visible = true
-		
-func movimentacao():
-	movimento = move_and_slide(movimento)
-	movimento.y = 20

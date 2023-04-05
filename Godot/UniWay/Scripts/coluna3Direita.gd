@@ -4,7 +4,6 @@ var movimento = Vector2()
 
 func _process(delta):
 	teletransporte()
-	#movimentacao()
 	
 
 

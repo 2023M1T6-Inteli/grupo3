@@ -27,7 +27,7 @@ func _process(delta):
 	if($"Check(Checklist)1".visible == true && $"Check(Checklist)2".visible == true && $"Check(Checklist)3".visible == true && $"Check(Checklist)4".visible == true):
 		$continuar.disabled = false
 	alteradorDePersonagem()
-	
+	volumeIcone()
 	
 #Essa função altera as palavras de acordo com o idioma escolhido 
 func alteradorDeIdioma():
@@ -73,3 +73,21 @@ func alteradorDePersonagem():
 		3: 
 			$Caminhoneira2Selecionado.visible = true
 	
+
+
+func _on_volumeAtivo_pressed():
+	Sons.mudo()
+	Global.volume = false
+
+
+func _on_volumeMudo_pressed():
+	Sons.audivel()
+	Global.volume = true
+	
+func volumeIcone() ->void:
+	if Global.volume:
+		$volumeAtivo.rect_global_position.y = 22
+		$volumeMudo.rect_global_position.y = 100000
+	else:
+		$volumeAtivo.rect_global_position.y = 100000
+		$volumeMudo.rect_global_position.y = 12

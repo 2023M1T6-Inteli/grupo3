@@ -46,6 +46,9 @@ func _process(delta) ->void:
 			self.isPaused = true
 		else:
 			self.isPaused = false
+			
+	#chamar função
+	#volumeIcone()
 
 #Função que altera palavras de acordo com o idioma escolhido
 	if Global.idiomaEscolhido == 0:
@@ -69,5 +72,4 @@ func _process(delta) ->void:
 func _exit_tree():
 	self.isPaused = false
 
-
-
+	

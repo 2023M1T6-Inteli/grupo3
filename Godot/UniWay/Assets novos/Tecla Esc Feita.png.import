@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Caminhoneira2.png-db0702c4273768cdba09c9b15744fb10.stex"
+path="res://.import/Tecla Esc Feita.png-c8b6e09bfeb92873d61e855a9f954d66.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Caminhoneira2.png"
-dest_files=[ "res://.import/Caminhoneira2.png-db0702c4273768cdba09c9b15744fb10.stex" ]
+source_file="res://Assets novos/Tecla Esc Feita.png"
+dest_files=[ "res://.import/Tecla Esc Feita.png-c8b6e09bfeb92873d61e855a9f954d66.stex" ]
 
 [params]
 

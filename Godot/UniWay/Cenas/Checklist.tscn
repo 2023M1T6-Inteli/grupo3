@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets novos/checklist.png" type="Texture" id=1]
 [ext_resource path="res://Assets novos/Check(Checklist).png" type="Texture" id=2]
@@ -10,7 +10,9 @@
 [ext_resource path="res://Assets novos/secretariaSentada.png" type="Texture" id=8]
 [ext_resource path="res://Assets novos/Caminhoneiro1.png" type="Texture" id=9]
 [ext_resource path="res://Assets novos/caminhoneira.png" type="Texture" id=10]
+[ext_resource path="res://Assets novos/Som Feito.png" type="Texture" id=11]
 [ext_resource path="res://Assets novos/Caminhoneiro2.png" type="Texture" id=12]
+[ext_resource path="res://Assets novos/Som Mudo Feito.png" type="Texture" id=13]
 
 [sub_resource type="StreamTexture" id=4]
 flags = 4
@@ -65,6 +67,7 @@ scale = Vector2( 1.55, 1.55 )
 texture = ExtResource( 12 )
 
 [node name="Caminhoneira2Selecionado" type="Sprite" parent="."]
+visible = false
 position = Vector2( -2075, -567 )
 scale = Vector2( 1.28723, 1.14988 )
 texture = SubResource( 4 )
@@ -182,8 +185,26 @@ stream = ExtResource( 5 )
 [node name="somContinuar" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 6 )
 
+[node name="volumeAtivo" type="TextureButton" parent="."]
+margin_left = 1796.0
+margin_top = 22.0
+margin_right = 2196.0
+margin_bottom = 426.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 11 )
+
+[node name="volumeMudo" type="TextureButton" parent="."]
+margin_left = 1788.0
+margin_top = 12.0
+margin_right = 2224.0
+margin_bottom = 495.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 13 )
+
 [connection signal="pressed" from="Button1" to="." method="_on_Button1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
 [connection signal="pressed" from="continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="volumeAtivo" to="." method="_on_volumeAtivo_pressed"]
+[connection signal="pressed" from="volumeMudo" to="." method="_on_volumeMudo_pressed"]

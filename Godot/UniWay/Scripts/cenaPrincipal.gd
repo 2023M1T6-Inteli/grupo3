@@ -14,7 +14,8 @@ func _ready():
 func _process(delta):
 	placarPista()
 	controladorDaMascaraDePause()
-	idiomaModificador()
+	volumeIcone()
+	#idiomaModificador()
 	#condição que faz tocar o som do motor do carro
 	if Global.pontosArmazenados == 30:
 		$KinematicBody2D/somDoMotor.play()
@@ -104,3 +105,27 @@ func _on_continuar_pressed():
 #função que faz o jogador ir até a cena final com os pontos garantidos
 func _on_garantirPontos_pressed():
 	get_tree().change_scene("res://Cenas/gameOver.tscn")
+
+#Controla o volume do jogo, sendo ele mudo ou não
+func _on_volumeAtivo_pressed():
+	Sons.mudo()
+	Global.volume = false
+
+func _on_volumeMudo_pressed():
+	Sons.audivel()
+	Global.volume = true
+
+#controla o icone do volume
+func volumeIcone():
+	if Global.verificadorDePause == true:
+		if Global.volume == true:
+			$KinematicBody2D/Camera2D/volumeAtivo.rect_global_position.y = -1030 + $KinematicBody2D/Camera2D.global_position.y
+			$KinematicBody2D/Camera2D/volumeMudo.rect_global_position.y = 100000
+		else:
+			$KinematicBody2D/Camera2D/volumeAtivo.rect_global_position.y = 100000
+			$KinematicBody2D/Camera2D/volumeMudo.rect_global_position.y = -1040 + $KinematicBody2D/Camera2D.global_position.y
+	else:
+		$KinematicBody2D/Camera2D/volumeAtivo.rect_global_position.y = 100000
+		$KinematicBody2D/Camera2D/volumeMudo.rect_global_position.y = 100000
+	if Global.volume == false:
+		Sons.mudo()
