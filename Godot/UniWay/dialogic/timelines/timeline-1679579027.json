@@ -42,7 +42,7 @@
 			"character": "character-1679566213.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "durante tu recorrido podrás elegir: continuar hasta donde quieras y ganar más puntos, arriesgándote a perderlos si tienes un accidente, o asegurarlos (barra espaciadora), deteniéndote así y guardando tus puntos en el ranking."
+			"text": "Durante tu recorrido podrás elegir continuar hasta donde quieras y ganar más puntos, arriesgándote a perderlos si tienes un accidente, o asegurarlos (barra espaciadora), deteniéndote así y guardando tus puntos en el ranking."
 		},
 		{
 			"change_scene": "res://Cenas/Checklist.tscn",
