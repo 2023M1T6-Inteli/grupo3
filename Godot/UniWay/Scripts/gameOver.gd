@@ -22,6 +22,8 @@ func alteradorDeIdioma():
 		$retorno.text = "VOLTAR PARA O MENU"
 		$os5Melhores.text = "Os 5 melhores"
 		$voltar.text = "Voltar"
+		$Fim.text = "fim!"
+		
 	elif Global.idiomaEscolhido == 1:
 		pontos = 'Your Score: '
 		nome = "Your name: "
@@ -29,6 +31,8 @@ func alteradorDeIdioma():
 		$retorno.text = "BACK TO MENU"
 		$os5Melhores.text = "TOP 5"
 		$voltar.text = "Back"
+		$Fim.text = "end!"
+		
 	elif Global.idiomaEscolhido == 2:
 		pontos = 'Tus Puntos: '
 		nome = "Su nombre: "
@@ -36,6 +40,7 @@ func alteradorDeIdioma():
 		$retorno.text = "DE REGRESO AL COMIENZO"
 		$os5Melhores.text = "los 5 mejores"
 		$voltar.text = "volver"
+		$Fim.text = "fin!"
 
 #Função que retorna a cena inicial quando o botão de retorno é pressionado 
 func _on_retorno_pressed():

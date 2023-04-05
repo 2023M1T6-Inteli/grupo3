@@ -416,6 +416,7 @@ smoothing_speed = 40.0
 
 [node name="Pause" parent="KinematicBody2D/Camera2D" instance=ExtResource( 7 )]
 pause_mode = 2
+visible = false
 light_mask = 16
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -496,7 +497,7 @@ margin_top = 944.0
 margin_right = 1895.0
 margin_bottom = 1015.0
 custom_fonts/font = SubResource( 12 )
-text = "Pressione qualquer tecla para continuar "
+text = "Pressione qualquer tecla para continuar"
 align = 1
 
 [node name="garantirPontos" type="Button" parent="KinematicBody2D/Camera2D"]
@@ -523,7 +524,7 @@ text = "voltar"
 flat = true
 align = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="KinematicBody2D/Camera2D/garantirPontos"]
+[node name="alerta" type="RichTextLabel" parent="KinematicBody2D/Camera2D/garantirPontos"]
 margin_left = -342.0
 margin_top = 230.0
 margin_right = 1341.0
@@ -545,6 +546,7 @@ texture = ExtResource( 30 )
 
 [node name="volumeAtivo" type="TextureButton" parent="KinematicBody2D/Camera2D"]
 pause_mode = 2
+visible = false
 margin_left = 835.0
 margin_top = -1034.0
 margin_right = 1235.0
@@ -555,6 +557,7 @@ texture_disabled = ExtResource( 40 )
 
 [node name="volumeMudo" type="TextureButton" parent="KinematicBody2D/Camera2D"]
 pause_mode = 2
+visible = false
 margin_left = 827.0
 margin_top = -1044.0
 margin_right = 1263.0

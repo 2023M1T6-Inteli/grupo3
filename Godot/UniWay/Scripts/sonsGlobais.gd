@@ -20,3 +20,6 @@ func mudo():
 func audivel():
 	$sertanejo.stream_paused= false
 	$rock.stream_paused = false
+
+func click():
+	$clickMouse.play()

@@ -9,13 +9,15 @@ var pontos :String
 func _ready():
 	#Começa a tocar o som do motor do caminhão 
 	Global.verificadorGarantirPontos = false
+	$KinematicBody2D/Camera2D/volumeAtivo.visible = true
+	$KinematicBody2D/Camera2D/volumeMudo.visible = true
 	
 #Função que chama outras funções a cada frame do jogo
 func _process(delta):
 	placarPista()
 	controladorDaMascaraDePause()
 	volumeIcone()
-	#idiomaModificador()
+	idiomaModificador()
 	#condição que faz tocar o som do motor do carro
 	if Global.pontosArmazenados == 30:
 		$KinematicBody2D/somDoMotor.play()
@@ -60,27 +62,39 @@ func controladorDaMascaraDePause() ->void:
 #Função que modifica os textos de acordo com o idioma escolhido
 func idiomaModificador():
 	if Global.idiomaEscolhido == 0:
-		$KinematicBody2D/Camera2D/Label.text = "Para movimentar utilize os comandos abaixo"
-		$KinematicBody2D/Camera2D/Label/Label.text = "Pressione qualquer tecla para continuar"
+		$KinematicBody2D/Camera2D/Label.text = "Lista de comandos (teclado)"
+		$KinematicBody2D/Camera2D/Label/Label1.text = "Mover para a esquerda"
+		$KinematicBody2D/Camera2D/Label/Label2.text = "mover para a direita"
+		$KinematicBody2D/Camera2D/Label/Label3.text = "pausar o jogo"
+		$KinematicBody2D/Camera2D/Label/Label4.text = "Garantir Pontos"
+		$KinematicBody2D/Camera2D/Label/Label5.text = "Pressione qualquer tecla para continuar"
 		pontos = "Pontos "
-		$KinematicBody2D/Camera2D/Label/Label2.text = "Para garantir seus pontos use o comando abaixo"
+		$KinematicBody2D/Camera2D/garantirPontos/alerta.text = "              clique em garantir pontos para que seus pontos sejam salvos.\n              Caso deseje continuar na sua viagem clique em voltar, mas lembrando que seus pontos ficaram igual a zero se perder."
 		$KinematicBody2D/Camera2D/garantirPontos.text  = "Garantir pontos"
 		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "voltar"
 		
 	elif Global.idiomaEscolhido == 1:
-		$KinematicBody2D/Camera2D/Label.text = "To move use the commands below"
-		$KinematicBody2D/Camera2D/Label/Label.text = "Press any key to continue"
+		$KinematicBody2D/Camera2D/Label.text = "List of commands (keyboard)"
+		$KinematicBody2D/Camera2D/Label/Label1.text = "move left"
+		$KinematicBody2D/Camera2D/Label/Label2.text = "move right"
+		$KinematicBody2D/Camera2D/Label/Label3.text = "pause the game"
+		$KinematicBody2D/Camera2D/Label/Label4.text = "Guarantee Points"
+		$KinematicBody2D/Camera2D/Label/Label5.text = "Press any key to continue"
 		pontos = "Score "
-		$KinematicBody2D/Camera2D/Label/Label2.text = "To secure your points use the command below"
+		$KinematicBody2D/Camera2D/garantirPontos/alerta.text = "              click secure points to have your points saved.\n              If you want to continue on your trip, click on return, remembering that your points will be equal to zero if you lose."
 		$KinematicBody2D/Camera2D/garantirPontos.text  = "secure points"
-		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "back"
+		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "return"
 	
 	elif Global.idiomaEscolhido == 2: 
-		$KinematicBody2D/Camera2D/Label.text = "Para mover usa los siguientes comandos"
-		$KinematicBody2D/Camera2D/Label/Label.text = "Pulse cualquier tecla para continuar"
+		$KinematicBody2D/Camera2D/Label.text = "Lista de comandos (teclado)"
+		$KinematicBody2D/Camera2D/Label/Label1.text = "mover hacia la izquierda"
+		$KinematicBody2D/Camera2D/Label/Label2.text = "mover a la derecha"
+		$KinematicBody2D/Camera2D/Label/Label3.text = "pausa el juego"
+		$KinematicBody2D/Camera2D/Label/Label4.text = "guardar puntos"
+		$KinematicBody2D/Camera2D/Label/Label5.text = "Pulse cualquier tecla para continuar"
 		pontos = "Puntos "
-		$KinematicBody2D/Camera2D/Label/Label2.text = "Para asegurar sus puntos, use el siguiente comando"
-		$KinematicBody2D/Camera2D/garantirPontos.text  = "puntos seguros"
+		$KinematicBody2D/Camera2D/garantirPontos/alerta.text = "              haga clic en guardar puntos para guardar sus puntos.\n              Si quieres continuar con tu viaje, haz clic en volver, recordando que tus puntos seran igual a cero si pierdes."
+		$KinematicBody2D/Camera2D/garantirPontos.text  = "guardar puntos"
 		$KinematicBody2D/Camera2D/garantirPontos/continuar.text = "volver"
 		
 #função que faz o menu de garantir os pontos aparecer

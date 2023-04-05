@@ -8,10 +8,10 @@ var nome = ""
 var valorAleatorio = rand_range(0,78)
 func _ready():
 	Global.pontosArmazenados = 0
+	musica()
 	$sirene.play()
 	yield(get_tree().create_timer(5),"timeout")
 	$sirene.stop()
-	musica()
 	
 #Função que habilita a visualização do botão
 func _process(delta):

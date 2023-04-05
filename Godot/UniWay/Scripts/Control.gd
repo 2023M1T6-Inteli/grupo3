@@ -4,8 +4,13 @@ extends Control
 onready var caminhao = get_node("KinematicBody2D")
 
 #Essa variável valida a movimentação do caminhão
-var validadorDoMovimentoDocaminhao:bool = false
-
+var validadorDoMovimentoDocaminhao:bool
+var validador:bool
+func _ready():
+	validadorDoMovimentoDocaminhao = false
+	validador = true
+	
+	
 #Essa função prossegue a linha do jogo fazendo a aba de
 #inserir o nome aparecer ao clickar no botão "START"
 func _on_StartButton_pressed():
@@ -19,7 +24,7 @@ func _on_StartButton_pressed():
 
 #Essa função abre o menu de seleção de idiomas
 func _on_Idioma_pressed():
-	$somCorreto.play() 
+	Sons.click()
 	$TituloDoJogo.visible = false
 	$control.visible = false
 	$quemSomos.visible = false
@@ -37,7 +42,7 @@ func _on_Exit_pressed():
 
 #Função que muda o idioma para PT-BR
 func _on_PTBR_pressed():
-	$somCorreto.play()
+	Sons.click()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$quemSomos.visible = true
@@ -50,7 +55,7 @@ func _on_PTBR_pressed():
 	
 #Função que muda o idioma para inglês
 func _on_English_pressed():
-	$somCorreto.play()
+	Sons.click()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$quemSomos.visible = true
@@ -63,7 +68,7 @@ func _on_English_pressed():
 
 #Função que muda o idioma para espanhol
 func _on_Spanish_pressed():
-	$somCorreto.play()
+	Sons.click()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$quemSomos.visible = true
@@ -78,6 +83,7 @@ func _on_Spanish_pressed():
 
 #Função que sai do menu de seleção de idioma sem alterar o idioma
 func _on_VoltarIdioma_pressed():
+	Sons.click()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$quemSomos.visible = true
@@ -96,6 +102,7 @@ func _process(delta):
 		
 #Botão que mostra a tela de desenvolvedores
 func _on_quemSomos_pressed():
+	Sons.click()
 	$TituloDoJogo.visible = false
 	$control.visible = false
 	$quemSomos.visible = false
@@ -108,6 +115,7 @@ func _on_quemSomos_pressed():
 	
 #Botão que redireciona para a página web do site da unipar
 func _on_Unipar_pressed():
+	Sons.click()
 	OS.shell_open("https://www.unipar.com/")
 
 
@@ -124,9 +132,11 @@ func validadorDeMovimento():
 	else:
 		$LineEdit/Label/continuar.disabled = false
 		if Input.get_action_strength("ui_accept") == 1 or validadorDoMovimentoDocaminhao == true:
-			$somCorreto.play()
 			Global.nomeDoJogador = String($LineEdit.text)
 			caminhao.verificadorDeMovimento = true
+			if validador:
+				$somCorreto.play()
+				validador = false
 			
 			
 	
@@ -138,6 +148,7 @@ func _enter_tree():
 
 #botão que faz aparecer o ranking do jogo
 func _on_Top_5_pressed():
+	Sons.click()
 	alteradorDeRanking()
 	$TituloDoJogo.visible = false
 	$control.visible = false
@@ -175,6 +186,7 @@ func alteradorDeRanking():
 
 #botão que sai do ranking do jogo voltando para a tela inicial
 func _on_voltarRanking_pressed():
+	Sons.click()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$quemSomos.visible = true
@@ -189,6 +201,7 @@ func musica():
 	
 	
 func _on_voltarDev_pressed():
+	Sons.click()
 	$TituloDoJogo.visible = true
 	$control.visible = true
 	$quemSomos.visible = true
@@ -201,6 +214,7 @@ func _on_voltarDev_pressed():
 
 #Botão que redireciona para a nossa pagina do GitHub
 func _on_gitHub_pressed():
+	Sons.click()
 	OS.shell_open("https://github.com/2023M1T6-Inteli/grupo3")
 
 #Função que possue condições que realizam a troca de 
