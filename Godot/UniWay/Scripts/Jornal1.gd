@@ -33,6 +33,7 @@ func _on_voltarParaOMenu_pressed():
 func idiomaModificador():
 	if Global.idiomaEscolhido == 0:
 		$voltarParaOMenu.text = "Continuar"
+		$contatoEmergencia.text = "contatos de emergencia\nSanto Andre: 0800 123 8222\nCubatao: 0800 123 8111"
 		match Global.comoPerdeu:
 			0:
 				if valorAleatorio <= 49:
@@ -43,6 +44,7 @@ func idiomaModificador():
 				$RichTextLabel.text = nome + " dormiu ao volante e sofreu um acidente causado por um buraco em estrada."
 	elif Global.idiomaEscolhido == 1:
 		$voltarParaOMenu.text = "Continue"
+		$contatoEmergencia.text = "emergency contacts\nSanto Andre: 0800 123 8222\nCubatao: 0800 123 8111"
 		match Global.comoPerdeu:
 			0:
 				if valorAleatorio <= 49:
@@ -54,6 +56,7 @@ func idiomaModificador():
 	
 	elif Global.idiomaEscolhido == 2: 
 		$voltarParaOMenu.text = "Continuar"
+		$contatoEmergencia.text = "contactos de emergencia\nSanto Andre: 0800 123 8222\nCubatao: 0800 123 8111"
 		match Global.comoPerdeu:
 			0:
 				if valorAleatorio <= 49:

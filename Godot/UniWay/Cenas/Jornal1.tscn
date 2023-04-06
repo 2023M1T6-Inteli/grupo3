@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets novos/Jornais/jornal3.jpg" type="Texture" id=1]
 [ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=2]
@@ -10,16 +10,6 @@
 [ext_resource path="res://Musicas/ES_Police Siren Ext 1 - SFX Producer.mp3" type="AudioStream" id=8]
 [ext_resource path="res://Assets novos/Jornais/jornal4.jpg" type="Texture" id=9]
 
-[sub_resource type="DynamicFont" id=2]
-size = 64
-font_data = ExtResource( 2 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 64
-outline_size = 3
-outline_color = Color( 0.117647, 0.117647, 0.117647, 1 )
-font_data = ExtResource( 2 )
-
 [sub_resource type="DynamicFont" id=4]
 size = 35
 outline_size = 3
@@ -30,6 +20,12 @@ font_data = ExtResource( 2 )
 size = 80
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 2
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+outline_size = 3
+outline_color = Color( 0.141176, 0.141176, 0.141176, 1 )
 font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
@@ -73,8 +69,6 @@ margin_left = 579.0
 margin_top = 583.0
 margin_right = 1089.0
 margin_bottom = 814.0
-custom_fonts/mono_font = SubResource( 2 )
-custom_fonts/bold_font = SubResource( 3 )
 custom_fonts/normal_font = SubResource( 4 )
 text = "Caminhoneira dormiu ao volante e sofreu um acidente causado por um buraco em estrada"
 
@@ -95,5 +89,15 @@ flat = true
 stream = ExtResource( 8 )
 volume_db = -14.192
 autoplay = true
+
+[node name="contatoEmergencia" type="RichTextLabel" parent="."]
+margin_left = 1291.0
+margin_top = 887.0
+margin_right = 1983.0
+margin_bottom = 1074.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "contatos de emergencia
+Santo Andre: 0800 123 8222
+Cubatao: 0800 123 8111"
 
 [connection signal="pressed" from="voltarParaOMenu" to="." method="_on_voltarParaOMenu_pressed"]
