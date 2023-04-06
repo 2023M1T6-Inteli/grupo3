@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets novos/PixelSplitter-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/pause.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/relogioNivelPrincipal.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 2
+outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 52
+outline_size = 2
+outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="Theme" id=6]
+
+[sub_resource type="DynamicFont" id=4]
+size = 50
+outline_size = 2
+outline_color = Color( 0.290196, 0.290196, 0.290196, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="Pause" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.223529, 0.223529, 0.223529, 0.705882 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 708.0
+margin_top = 271.0
+margin_right = 1211.0
+margin_bottom = 809.0
+custom_constants/separation = 150
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 503.0
+margin_bottom = 117.0
+custom_fonts/font = SubResource( 1 )
+text = "PAUSADO"
+align = 1
+valign = 1
+
+[node name="Resumir" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 267.0
+margin_right = 503.0
+margin_bottom = 329.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0.866667, 1, 0.00392157, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Resumir"
+flat = true
+
+[node name="Sair" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 479.0
+margin_right = 503.0
+margin_bottom = 538.0
+focus_mode = 0
+theme = SubResource( 6 )
+custom_colors/font_color_hover = Color( 0.905882, 0.960784, 0.211765, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+enabled_focus_mode = 0
+text = "Sair"
+flat = true
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( -100, 5000 )
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Resumir" to="." method="_on_Resumir_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Sair" to="." method="_on_Sair_pressed"]

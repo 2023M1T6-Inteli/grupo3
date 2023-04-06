@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Police Siren Ext 1 - SFX Producer.mp3-fabab2f158ebdfaffbfa108d186c55ba.mp3str"
+
+[deps]
+
+source_file="res://Musicas/ES_Police Siren Ext 1 - SFX Producer.mp3"
+dest_files=[ "res://.import/ES_Police Siren Ext 1 - SFX Producer.mp3-fabab2f158ebdfaffbfa108d186c55ba.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

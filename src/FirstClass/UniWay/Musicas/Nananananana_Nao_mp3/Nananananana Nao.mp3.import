@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Nananananana Nao.mp3-d1248ef61b48cb9b25c02edcc12a661a.mp3str"
+
+[deps]
+
+source_file="res://Musicas/Nananananana_Nao_mp3/Nananananana Nao.mp3"
+dest_files=[ "res://.import/Nananananana Nao.mp3-d1248ef61b48cb9b25c02edcc12a661a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
