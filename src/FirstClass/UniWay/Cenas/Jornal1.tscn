@@ -91,10 +91,10 @@ volume_db = -14.192
 autoplay = true
 
 [node name="contatoEmergencia" type="RichTextLabel" parent="."]
-margin_left = 1291.0
-margin_top = 887.0
-margin_right = 1983.0
-margin_bottom = 1074.0
+margin_left = 1209.0
+margin_top = 374.0
+margin_right = 1901.0
+margin_bottom = 561.0
 custom_fonts/normal_font = SubResource( 5 )
 text = "contatos de emergencia
 Santo Andre: 0800 123 8222

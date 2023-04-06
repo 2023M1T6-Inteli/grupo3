@@ -12,7 +12,7 @@
 [ext_resource path="res://Musicas/som resposta certa.mp3" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Highway Artwork/Layers/highway-sky.png" type="Texture" id=11]
 [ext_resource path="res://Assets novos/Fabrica.png" type="Texture" id=12]
-[ext_resource path="res://Assets novos/Logo-Inteli.png" type="Texture" id=13]
+[ext_resource path="res://Assets novos/logoInteli.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFontData" id=9]
 
@@ -615,9 +615,9 @@ custom_fonts/font = SubResource( 29 )
 text = "GitHub"
 flat = true
 
-[node name="Logo-Inteli" type="Sprite" parent="desenvolvedores"]
-position = Vector2( 1692, 952 )
-scale = Vector2( 3, 3 )
+[node name="LogoInteli" type="Sprite" parent="desenvolvedores"]
+position = Vector2( 1664, 949 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 13 )
 
 [connection signal="pressed" from="control/StartButton" to="." method="_on_StartButton_pressed"]
