@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/car_crash_glass.mp3-11c81544b444923ec734e6bebdadbe93.mp3str"
+
+[deps]
+
+source_file="res://Musicas/car_crash_glass.mp3"
+dest_files=[ "res://.import/car_crash_glass.mp3-11c81544b444923ec734e6bebdadbe93.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

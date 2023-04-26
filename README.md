@@ -15,7 +15,7 @@
   - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/JoãoCaue_Foto.jpeg" width="120px;" style="border-radius:50%" alt=""><b>João Caue</b></a></td>
   - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/Gustavo_imagem.jpeg" width="120px;" style="border-radius:50%" alt=""><b>Gustavo Gouveia</b></a></td>
   - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="https://media.licdn.com/dms/image/D4D03AQHs0Kfrwmc5gA/profile-displayphoto-shrink_400_400/0/1676560340280?e=1684368000&v=beta&t=cqnYN3QvUcWDT96ZX0J74G2iEUGJQLE2xwfsg-PAbPU" width="120px;" style="border-radius:50%" alt=""><b>Gabrielle Mitoso</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="" width="120px;" style="border-radius:50%" alt=""><b>Marcela</b></a></td>
+  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/MarcelaImagem.jpeg" width="120px;" style="border-radius:50%" alt=""><b>Marcela Issa</b></a></td>
   - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/Breno_imagem.jpeg" width="120px;" style="border-radius:50%" alt=""><b>Breno Santana</b></a></td>
   - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="" width="120px;" style="border-radius:50%" alt=""><b>Moyses</b></a></td>
 
@@ -57,6 +57,7 @@ A pasta raiz contem dois arquivos que devem ser alterados:
 Há também 4 pastas que seguem da seguinte forma:
 
 <b>docs</b>: Aqui estão os arquivos compilados em HTML do jogo.
+
 <b>documentos</b>: Aqui estarão todos os documentos do projeto, mas principalmente o <b>GDD (Game Design Document)/Documentação do Sistema</b>. Há uma pasta <b>antigos</b> onde estarão todas as versões antigas da documentação.
 
 <b>executáveis</b>: Aqui estarão todos os executáveis do jogo, prontos para rodar. Há 2 pastas, uma para binários <b>Windows</b> e uma para a <b>Web/HTML</b>
@@ -90,7 +91,25 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
-*
+* 1.0.0 6/4/2023
+    * Novas funcionalidades na tela inicial
+    * Botão de silenciar a música
+    * Novo tutorial com UX melhorado
+    * Adição logo Inteli
+    * Adição do Número de emergência da Unipar
+    * Organização de pastas e arquivos do jogo
+    * Lançamento do jogo
+* 0.8.1 3/4/2023
+    * Novo fundo na cena do checklist
+    * Implementação das novas músicas
+    * Implementação de novos objetos no cenário
+* 0.8.0 29/3/2023
+    * Implementação de objetos no cenário
+    * Implementação do som da sirene na cena do jornal
+    * Adição da seleção de músicas
+    * Novo som do motor do caminhão
+* 0.7.5 - 25/3/2023
+    * Aprimoramento de todas as interfaces do jogo
 * 0.7.0 - 23/03/2023
     * Implementação da mecânica de garantir pontos
     * Criação da tela de seleção de personagens
@@ -112,6 +131,7 @@ A cada atualização os detalhes devem ser lançados aqui.
     * Aprimoramento da usabilidade do jogo
     * Troca da imagem do caminhão para uma aparência mais próxima da Unipar
     * Novo cenário
+    * Primeira implementação do jornal conscientizador ao jogo
 * 0.3.0 - 22/02/2023
     * Criação do checklkist
     * Aprimoramento do sistema de pause (criação de uma máscara escura)
@@ -141,3 +161,5 @@ Aqui estão as referências usadas no projeto.
 3. <https://creativecommons.org/share-your-work/>
 4. <https://freesound.org/>
 5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+
+O restante das referências estão no GDD (Game Design Document)/Documentação do Sistema, presente na pasta documentos.
