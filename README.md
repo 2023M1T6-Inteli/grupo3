@@ -10,21 +10,20 @@
 
 ## Integrantes: 
 
-  - <td align="left"><a href="https://www.linkedin.com/in/MarceloMiguelAssis"> <img src="./imagens/Marcelo_imagem.jpg" width="120px;" style="border-radius:50%" alt=""><b>Marcelo Assis</b></a></td>
-  - <td align="center" /td><a href="https://www.linkedin.com/in/guilherme-pardi-87b815264/"> <img src="https://avatars.githubusercontent.com/u/94144009?v=4" width="120px;" style="border-radius:50%" alt=""><bu><b>Guilherme Pardi</b></a>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/JoãoCaue_Foto.jpeg" width="120px;" style="border-radius:50%" alt=""><b>João Caue</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/Gustavo_imagem.jpeg" width="120px;" style="border-radius:50%" alt=""><b>Gustavo Gouveia</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="https://media.licdn.com/dms/image/D4D03AQHs0Kfrwmc5gA/profile-displayphoto-shrink_400_400/0/1676560340280?e=1684368000&v=beta&t=cqnYN3QvUcWDT96ZX0J74G2iEUGJQLE2xwfsg-PAbPU" width="120px;" style="border-radius:50%" alt=""><b>Gabrielle Mitoso</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/MarcelaImagem.jpeg" width="120px;" style="border-radius:50%" alt=""><b>Marcela Issa</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="./imagens/Breno_imagem.jpeg" width="120px;" style="border-radius:50%" alt=""><b>Breno Santana</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <img src="" width="120px;" style="border-radius:50%" alt=""><b>Moyses</b></a></td>
+  - <td align="left"><a href="https://www.linkedin.com/in/MarceloMiguelAssis"><b>Marcelo Assis</b></a></td>
+  - <td align="center" /td><a href="https://www.linkedin.com/in/guilherme-pardi-87b815264/"> <bu><b>Guilherme Pardi</b></a>
+  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>João Caue</b></a></td>
+  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Gustavo Gouveia</b></a></td>
+  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Gabrielle Mitoso</b></a></td>
+  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Marcela Issa</b></a></td>
+  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Breno Santana</b></a></td>
+  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Moyses</b></a></td>
 
 ## Descrição
 
 📜 O projeto foi desenvolvido pelo grupo B3tt3r no módulo 1 do Inteli (Instituto de Tecnologia e Liderança). Esse projeto tem como objetivos, conscientizar os motoristas e operadores de carga da empresa parceira Unipar.
 <br><br>
 <p align="center">
-<img src="./imagens/FotoDoJogo.png" alt="NOME DO JOGO" border="0">
   Game by B3tt3r
 </p>
 
