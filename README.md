@@ -13,10 +13,10 @@
   - <td align="left"><a href="https://www.linkedin.com/in/MarceloMiguelAssis"><b>Marcelo Assis</b></a></td>
   - <td align="center" /td><a href="https://www.linkedin.com/in/guilherme-pardi-87b815264/"> <bu><b>Guilherme Pardi</b></a>
   - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>João Caue</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Gustavo Gouveia</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Gabrielle Mitoso</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Marcela Issa</b></a></td>
-  - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Breno Santana</b></a></td>
+  - <td align="left"><a href="https://www.linkedin.com/in/gustavo-gouveia-583185271/"> <b>Gustavo Gouveia</b></a></td>
+  - <td align="left"><a href="https://www.linkedin.com/in/gabrielle-mitoso-6253a219b/"> <b>Gabrielle Mitoso</b></a></td>
+  - <td align="left"><a href="https://www.linkedin.com/in/marcela-issa-838674268/"> <b>Marcela Issa</b></a></td>
+  - <td align="left"><a href="https://www.linkedin.com/in/breno-santana-4a1912228/"> <b>Breno Santana</b></a></td>
   - <td align="left"><a href="https://github.com/2023M1T6-Inteli/grupo3"> <b>Moyses</b></a></td>
 
 ## Descrição
@@ -27,6 +27,9 @@
   Game by B3tt3r
 </p>
 
+## 🎮 Jogue agora
+
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [B3tt3r](https://2023m1t6-inteli.github.io/grupo3/)
 
 
 <br><br>
@@ -149,7 +152,8 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 ## 📋 Licença/License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/Spidus/Teste_Final_1">MODELO GIT INTELI</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yggbrasil.com.br/vr">INTELI, VICTOR BRUNO ALEXANDER ROSETTI DE QUIROZ</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p>
+<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"> <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2023M1T9-inteli/grupo3">B3tt3r</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/InteliProjects">Inteli</a>, <a href="https://www.linkedin.com/in/MarceloMiguelAssis">Marcelo Assis</a>, <a href="https://www.linkedin.com/in/guilherme-pardi-87b815264/">Guilherme Pardi</a>, <a href="https://github.com/2023M1T6-Inteli/grupo3">João Cauê</a>, <a href="https://www.linkedin.com/in/gustavo-gouveia-583185271/">Gustavo Gouveia</a>, <a href="https://www.linkedin.com/in/gabrielle-mitoso-6253a219b/">Gabrielle Mitoso</a>, <a href="https://www.linkedin.com/in/marcela-issa-838674268/">Marcela Issa</a>, <a href="https://www.linkedin.com/in/breno-santana-4a1912228/">Breno Santana</a>, <a href="https://github.com/2023M1T6-Inteli/grupo3">Moyses</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
 
 ## 🎓 Referências
 
